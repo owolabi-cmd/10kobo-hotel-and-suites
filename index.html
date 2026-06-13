@@ -1,0 +1,3959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>10Kobo Hotel &amp; Suites | Luxury Hotel &amp; Accommodation</title>
+<meta name="description" content="Welcome to 10Kobo Hotel &amp; Suites. Experience premium luxury, exquisite dining, and world-class accommodation. Book your stay today."/>
+<meta name="keywords" content="10Kobo hotel, 10 kobo, luxury suites, hotel booking, luxury accommodation, Lagos"/>
+<meta name="theme-color" content="#0c0c0e"/>
+
+<!-- ── Favicon ─────────────────────────────────────────────────
+     Place logo.png in the same folder as this HTML file.
+     The browser will use it as the tab icon automatically.   -->
+<link rel="icon" type="image/png" href="logo.png"/>
+<link rel="apple-touch-icon" href="logo.png"/>
+
+<!-- ── SEO: Robots ─────────────────────────────────────────── -->
+<meta name="robots" content="index, follow"/>
+
+<!-- ── Open Graph (Facebook, WhatsApp share previews) ─────────
+     og:image should be a full URL to a landscape hotel photo. -->
+<meta property="og:url"         content="https://10kobohotel.com/"/>
+<link rel="canonical"           href="https://10kobohotel.com/"/>
+<meta property="og:type"        content="website"/>
+<meta property="og:site_name"   content="10Kobo Hotel &amp; Suites"/>
+<meta property="og:title"       content="10Kobo Hotel &amp; Suites — Lagos' Premier Urban Oasis"/>
+<meta property="og:description" content="Luxury rooms, 24/7 dining, and electric club nights in Egbe-Ikotun, Alimosho, Lagos. Book your stay at 10Kobo Hotel &amp; Suites today."/>
+<meta property="og:image"       content="https://10kobohotel.com/file_00000000b5e071f492f7cb91c790fea0.png"/>
+<meta property="og:image:width"  content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale"      content="en_NG"/>
+
+<!-- ── Twitter / X Card ───────────────────────────────────────  -->
+<meta name="twitter:card"        content="summary_large_image"/>
+<meta name="twitter:title"       content="10Kobo Hotel &amp; Suites — Lagos' Premier Urban Oasis"/>
+<meta name="twitter:description" content="Luxury rooms, 24/7 dining, and electric club nights in Egbe-Ikotun, Lagos. Book now."/>
+<meta name="twitter:image"       content="https://10kobohotel.com/file_00000000b5e071f492f7cb91c790fea0.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+<!-- Google Maps JS API removed — using iframe embed instead -->
+<style>
+  /* ═══════════════════════════════════════════════════════════
+     DESIGN TOKENS — CSS Custom Properties
+     Single source of truth for the entire design system
+  ═══════════════════════════════════════════════════════════ */
+  :root {
+    /* Colour palette */
+    --clr-bg:         #0c0c0e;
+    --clr-surface-1:  #111114;
+    --clr-surface-2:  #18181d;
+    --clr-surface-3:  #1e1e26;
+    --clr-border:     #2a2a32;
+    --clr-border-mid: #3a3a46;
+    --clr-gold:       #c9a84c;
+    --clr-gold-light: #e8c870;
+    --clr-gold-dark:  #a07830;
+    --clr-gold-dim:   rgba(201,168,76,0.18);
+    --clr-text-1:     #e8e4d8;
+    --clr-text-2:     #a09880;
+    --clr-text-3:     #6a6a7a;
+    --clr-text-4:     #4a4a5a;
+    --clr-neon:       #e8ff47;
+    --clr-green:      #4ade80;
+
+    /* Spacing scale */
+    --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;
+    --sp-4: 16px;  --sp-5: 20px;  --sp-6: 24px;
+    --sp-8: 32px;  --sp-10: 40px; --sp-12: 48px;
+    --sp-16: 64px; --sp-20: 80px; --sp-24: 96px;
+
+    /* Radius */
+    --r-sm:  6px;
+    --r-md:  10px;
+    --r-lg:  14px;
+    --r-xl:  20px;
+    --r-full: 9999px;
+
+    /* Shadows */
+    --shadow-gold-sm:  0 4px 18px  rgba(201,168,76,0.22);
+    --shadow-gold-md:  0 8px 32px  rgba(201,168,76,0.28);
+    --shadow-gold-lg:  0 20px 60px rgba(201,168,76,0.18);
+    --shadow-card:     0 2px 8px   rgba(0,0,0,0.5),
+                       0 8px 32px  rgba(0,0,0,0.4);
+    --shadow-float:    0 24px 64px rgba(0,0,0,0.7);
+
+    /* Transitions */
+    --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --t-fast:   150ms;
+    --t-base:   250ms;
+    --t-slow:   400ms;
+    --t-slower: 600ms;
+
+    /* Typography */
+    --font-display: 'Cormorant Garamond', 'Georgia', serif;
+    --font-body:    'DM Sans', system-ui, sans-serif;
+    --font-impact:  'Bebas Neue', 'Impact', cursive;
+  }
+
+  /* ── Reset & Base ──────────────────────────────────────── */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+  }
+
+  body {
+    background: var(--clr-bg);
+    color: var(--clr-text-1);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  /* Premium text selection */
+  ::selection {
+    background: rgba(201,168,76,0.28);
+    color: #e8c870;
+    text-shadow: none;
+  }
+
+  /* Focus visible — gold ring, no outline on click */
+  :focus { outline: none; }
+  :focus-visible {
+    outline: 2px solid var(--clr-gold);
+    outline-offset: 3px;
+    border-radius: var(--r-sm);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--clr-bg); }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(201,168,76,0.3);
+    border-radius: var(--r-full);
+    transition: background var(--t-base);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--clr-gold); }
+
+  /* ── Grain texture overlay ─────────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.32;
+  }
+
+  /* ── Typography Utilities ──────────────────────────────── */
+  .font-display { font-family: var(--font-display); }
+  .font-body    { font-family: var(--font-body); }
+  .font-impact  { font-family: var(--font-impact); }
+
+  /* Display headings use Cormorant ligatures */
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    font-feature-settings: "liga" 1, "dlig" 1, "kern" 1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Gold gradient text */
+  .gold-text {
+    background: linear-gradient(135deg, #e8c870 0%, #c9a84c 45%, #a07830 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Prevent clipping on descenders */
+    padding-bottom: 0.05em;
+    display: inline-block;
+  }
+
+  /* Neon text */
+  .neon-text {
+    color: var(--clr-neon);
+    text-shadow:
+      0 0 12px rgba(232,255,71,0.7),
+      0 0 32px rgba(232,255,71,0.4),
+      0 0 64px rgba(232,255,71,0.2);
+  }
+
+  /* ── Animated Elements ─────────────────────────────────── */
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float1 {
+    0%,100% { transform: translateY(0)   rotate(0deg); }
+    50%     { transform: translateY(-20px) rotate(180deg); }
+  }
+  @keyframes float2 {
+    0%,100% { transform: translateY(0)   rotate(0deg); }
+    50%     { transform: translateY(-30px) rotate(-120deg); }
+  }
+  @keyframes ping {
+    75%,100% { transform: scale(2.2); opacity: 0; }
+  }
+  @keyframes spinSlow {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes fieldShake {
+    0%,100% { transform: translateX(0); }
+    20%     { transform: translateX(-6px); }
+    40%     { transform: translateX(6px); }
+    60%     { transform: translateX(-4px); }
+    80%     { transform: translateX(4px); }
+  }
+  @keyframes pulseGold {
+    0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.4); }
+    50%     { box-shadow: 0 0 0 8px rgba(201,168,76,0); }
+  }
+
+  .fade-up  { animation: fadeUp 0.75s var(--ease-out) forwards; opacity: 0; }
+  .delay-1  { animation-delay: 0.12s; }
+  .delay-2  { animation-delay: 0.24s; }
+  .delay-3  { animation-delay: 0.38s; }
+  .delay-4  { animation-delay: 0.52s; }
+
+  .particle { position: absolute; border-radius: 50%; pointer-events: none; }
+
+  /* ── Shimmer line ──────────────────────────────────────── */
+  .shimmer-line {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(201,168,76,0.4) 30%,
+      #e8c870 50%,
+      rgba(201,168,76,0.4) 70%,
+      transparent 100%
+    );
+    background-size: 200% auto;
+    animation: shimmer 3.5s linear infinite;
+  }
+
+  /* ── Section Reveal ────────────────────────────────────── */
+  .section-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity  var(--t-slower) var(--ease-out),
+      transform var(--t-slower) var(--ease-out);
+  }
+  .section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Section Label ─────────────────────────────────────── */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    font-family: var(--font-body);
+    font-weight: 600;
+  }
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--clr-gold);
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  /* ── Divider ───────────────────────────────────────────── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    justify-content: center;
+    margin: var(--sp-4) 0;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    max-width: 80px;
+    height: 1px;
+  }
+  .divider::before { background: linear-gradient(90deg,  transparent, rgba(201,168,76,0.5)); }
+  .divider::after  { background: linear-gradient(270deg, transparent, rgba(201,168,76,0.5)); }
+
+  /* ── Navigation ────────────────────────────────────────── */
+  .nav-link {
+    position: relative;
+    font-size: 12.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--clr-text-2);
+    transition: color var(--t-base) var(--ease-smooth);
+    padding-bottom: 2px;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--clr-gold-dark), var(--clr-gold-light));
+    transition: width var(--t-slow) var(--ease-out), left var(--t-slow) var(--ease-out);
+  }
+  .nav-link:hover { color: var(--clr-gold-light); }
+  .nav-link:hover::after { width: 100%; left: 0; }
+  .nav-link.active { color: var(--clr-gold-light); }
+  .nav-link.active::after { width: 100%; left: 0; }
+
+  /* ── Header Logo ───────────────────────────────────────── */
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    text-decoration: none;
+    outline: none;
+    transition: opacity var(--t-base) var(--ease-smooth);
+  }
+  .logo-wrap:hover { opacity: 0.92; }
+
+  /* ── Header logo circle wrapper ────────────────────────── */
+  /* The clipping circle, border glow, and hover transition all
+     live on this wrapper. The <img> inside simply fills it.   */
+  .logo-circle-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;                         /* hard-clips coin to circle */
+    flex-shrink: 0;
+    display: block;
+    box-shadow:
+      0 0 0 1.5px rgba(201,168,76,0.32),
+      var(--shadow-gold-sm);
+    transition:
+      box-shadow var(--t-slow) var(--ease-out),
+      transform  var(--t-slow) var(--ease-spring);
+    will-change: transform;
+  }
+  .logo-wrap:hover .logo-circle-wrap {
+    box-shadow:
+      0 0 0 2px var(--clr-gold),
+      0 6px 28px rgba(201,168,76,0.5);
+    transform: scale(1.06) rotate(-3deg);
+  }
+
+  .header-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.12);                   /* zooms coin content to fill circle */
+    mix-blend-mode: screen;                   /* keys out native black background */
+    display: block;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transition: none;
+    will-change: auto;
+  }
+
+  .logo-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+  }
+  .logo-brand__name {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--clr-gold-light);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1, "kern" 1;
+  }
+  .logo-brand__sub {
+    font-size: 8.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clr-text-3);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  /* ── Buttons ───────────────────────────────────────────── */
+  /* Shared button base */
+  .btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2);
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r-sm);
+    transition:
+      transform  var(--t-base) var(--ease-spring),
+      box-shadow var(--t-base) var(--ease-smooth),
+      background var(--t-base) var(--ease-smooth);
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .btn-base:active { transform: scale(0.97) !important; }
+
+  /* Gold filled */
+  .btn-gold {
+    background: linear-gradient(135deg, #d4b155 0%, var(--clr-gold) 50%, var(--clr-gold-dark) 100%);
+    color: #0c0c0e;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    transition: all var(--t-base) var(--ease-smooth);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Shimmer sweep on hover */
+  .btn-gold::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 35%,
+      rgba(255,255,255,0.22) 50%,
+      transparent 65%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.55s var(--ease-out);
+  }
+  .btn-gold:hover::before { transform: translateX(100%); }
+  .btn-gold:hover {
+    box-shadow: 0 6px 24px rgba(201,168,76,0.45);
+    transform: translateY(-2px);
+  }
+  .btn-gold span { position: relative; z-index: 1; }
+
+  /* Gold outline */
+  .btn-outline {
+    border: 1px solid rgba(201,168,76,0.45);
+    color: var(--clr-gold-light);
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--t-base) var(--ease-smooth);
+    letter-spacing: 0.08em;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-outline::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
+    opacity: 0;
+    transition: opacity var(--t-base) var(--ease-smooth);
+  }
+  .btn-outline:hover {
+    border-color: var(--clr-gold);
+    color: var(--clr-gold-light);
+    box-shadow: 0 4px 20px rgba(201,168,76,0.2), inset 0 0 0 1px rgba(201,168,76,0.15);
+    transform: translateY(-1px);
+  }
+  .btn-outline:hover::before { opacity: 1; }
+
+  /* Neon */
+  .btn-neon {
+    background: var(--clr-neon);
+    color: var(--clr-bg);
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(232,255,71,0.4);
+    transition: all var(--t-base) var(--ease-smooth);
+  }
+  .btn-neon:hover {
+    background: #f2ff60;
+    box-shadow: 0 0 32px rgba(232,255,71,0.65), 0 4px 16px rgba(232,255,71,0.3);
+    transform: translateY(-2px);
+  }
+
+  /* ── Cards ─────────────────────────────────────────────── */
+  .gold-card {
+    border: 1px solid rgba(201,168,76,0.2);
+    position: relative;
+    transition:
+      border-color var(--t-slow) var(--ease-smooth),
+      transform    var(--t-slow) var(--ease-out),
+      box-shadow   var(--t-slow) var(--ease-smooth);
+    will-change: transform;
+  }
+  .gold-card:hover {
+    border-color: rgba(201,168,76,0.6);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card), var(--shadow-gold-lg);
+  }
+
+  .neon-card {
+    border: 1px solid rgba(232,255,71,0.14);
+    box-shadow: 0 0 28px rgba(232,255,71,0.07), inset 0 0 28px rgba(232,255,71,0.05);
+    transition:
+      box-shadow   var(--t-slow) var(--ease-smooth),
+      border-color var(--t-slow) var(--ease-smooth);
+  }
+  .neon-card:hover {
+    border-color: rgba(232,255,71,0.38);
+    box-shadow: 0 0 48px rgba(232,255,71,0.16), inset 0 0 40px rgba(232,255,71,0.1);
+  }
+
+  /* ── Amenity boxes ─────────────────────────────────────── */
+  .amenity-box {
+    background: var(--clr-surface-2);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--r-md);
+    transition:
+      border-color var(--t-slow) var(--ease-smooth),
+      background   var(--t-slow) var(--ease-smooth),
+      transform    var(--t-slow) var(--ease-out),
+      box-shadow   var(--t-slow) var(--ease-smooth);
+    will-change: transform;
+  }
+  .amenity-box:hover {
+    border-color: rgba(201,168,76,0.45);
+    background: var(--clr-surface-3);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card), 0 0 0 1px rgba(201,168,76,0.1);
+  }
+
+  /* ── Testimonial cards ─────────────────────────────────── */
+  .testimonial-card {
+    background: #14141a;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--r-lg);
+    transition:
+      border-color var(--t-slow) var(--ease-smooth),
+      transform    var(--t-slow) var(--ease-out),
+      box-shadow   var(--t-slow) var(--ease-smooth);
+    will-change: transform;
+  }
+  .testimonial-card:hover {
+    border-color: rgba(201,168,76,0.38);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card), 0 12px 40px rgba(201,168,76,0.1);
+  }
+
+  /* ── Stars ─────────────────────────────────────────────── */
+  .stars span {
+    color: var(--clr-gold);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Badge ─────────────────────────────────────────────── */
+  .badge-gold {
+    background: linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-gold-dark) 100%);
+    color: var(--clr-bg);
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 11px;
+    border-radius: var(--r-full);
+    box-shadow: 0 2px 10px rgba(201,168,76,0.35);
+    white-space: nowrap;
+  }
+
+  /* ── Form inputs ───────────────────────────────────────── */
+  .form-input {
+    background: var(--clr-surface-2);
+    border: 1px solid var(--clr-border);
+    color: var(--clr-text-1);
+    padding: 13px 16px;
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.5;
+    transition:
+      border-color var(--t-fast) var(--ease-smooth),
+      box-shadow   var(--t-fast) var(--ease-smooth),
+      background   var(--t-fast) var(--ease-smooth);
+    outline: none;
+    border-radius: var(--r-sm);
+    -webkit-appearance: none;
+  }
+  .form-input:hover:not(:focus) {
+    border-color: var(--clr-border-mid);
+    background: #1c1c22;
+  }
+  .form-input:focus {
+    border-color: rgba(201,168,76,0.7);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.14);
+    background: #1a1a22;
+  }
+  .form-input::placeholder {
+    color: var(--clr-text-4);
+    font-style: italic;
+  }
+
+  /* ── Mobile menu ───────────────────────────────────────── */
+  /* Mobile full-screen takeover drawer */
+  #mobile-menu {
+    display: none;
+    position: fixed;
+    top: 3.5rem;                       /* flush under h-14 (56px) header */
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 3.5rem);
+    z-index: 8999;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #mobile-menu.open { display: flex; }
+
+  /* Desktop active nav — gold capsule pill (reference: PureFlow dark pill style)  */
+  /* Semi-transparent gold tint + gold border + rounded pill = premium capsule look */
+  .nav-active {
+    color:            #D4AF37 !important;
+    font-weight:      600;
+    background:       rgba(212, 175, 55, 0.14);
+    border:           1px solid rgba(212, 175, 55, 0.40);
+    border-radius:    9999px;
+    padding:          4px 14px;
+    transition:       background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+  .nav-active::after { display: none; } /* remove any leftover underline */
+
+  /* Mobile active state — gold text ONLY, no background shape */
+  .mob-nav-active {
+    color: #c9a84c !important;
+  }
+
+  /* ── Utility: hero stripe ──────────────────────────────── */
+  .hero-stripe {
+    background: linear-gradient(160deg,
+      #0c0c0e 0%, #0c0c0e 40%,
+      #141410 40%, #141410 60%,
+      #0c0c0e 60%);
+  }
+
+  /* ── Tag pill — reusable chip component ────────────────── */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: var(--r-full);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--clr-gold);
+    background: rgba(201,168,76,0.07);
+    white-space: nowrap;
+    transition: background var(--t-base), border-color var(--t-base);
+  }
+  .tag:hover {
+    background: rgba(201,168,76,0.14);
+    border-color: rgba(201,168,76,0.5);
+  }
+
+  /* ── Stat block — reusable number/label pair ───────────── */
+  .stat-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    text-align: center;
+  }
+  .stat-block__number {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 600;
+    color: var(--clr-gold-light);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .stat-block__label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clr-text-3);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     SHADCN-INSPIRED COMPONENT SYSTEM
+     Premium UI layer — clean spacing, polished interactions
+  ═══════════════════════════════════════════════════════════ */
+
+  /* ── Badge variants ────────────────────────────────────── */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: var(--r-full);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: var(--font-body);
+  }
+  .badge-success {
+    background: rgba(74,222,128,0.1);
+    color: #4ade80;
+    border: 1px solid rgba(74,222,128,0.22);
+  }
+  .badge-gold-outline {
+    background: rgba(201,168,76,0.08);
+    color: var(--clr-gold);
+    border: 1px solid rgba(201,168,76,0.28);
+  }
+  .badge-muted {
+    background: rgba(255,255,255,0.04);
+    color: var(--clr-text-3);
+    border: 1px solid var(--clr-border);
+  }
+
+  /* ── ShadCN Card components ────────────────────────────── */
+  .card { background: var(--clr-surface-2); border: 1px solid var(--clr-border); border-radius: var(--r-lg); overflow: hidden; }
+  .card-header { padding: 20px 24px 16px; border-bottom: 1px solid var(--clr-border); }
+  .card-content { padding: 20px 24px; }
+  .card-footer { padding: 14px 24px; border-top: 1px solid var(--clr-border); background: rgba(255,255,255,0.02); }
+  .card-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--clr-text-1); line-height: 1.2; }
+  .card-description { font-size: 13px; color: var(--clr-text-3); margin-top: 4px; line-height: 1.6; }
+
+  /* ── Form group with label ─────────────────────────────── */
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clr-text-3);
+    font-family: var(--font-body);
+    transition: color var(--t-fast) var(--ease-smooth);
+  }
+  .form-group:focus-within .form-label { color: var(--clr-gold); }
+
+  /* Select with custom gold caret */
+  select.form-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c9a84c' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+    padding-right: 40px;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  /* ── Icon badge ────────────────────────────────────────── */
+  .icon-badge {
+    width: 52px; height: 52px;
+    border-radius: var(--r-md);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    background: linear-gradient(145deg, rgba(201,168,76,0.14) 0%, rgba(201,168,76,0.05) 100%);
+    border: 1px solid rgba(201,168,76,0.22);
+    transition:
+      background  var(--t-slow) var(--ease-smooth),
+      border-color var(--t-slow) var(--ease-smooth),
+      transform   var(--t-slow) var(--ease-spring),
+      box-shadow  var(--t-slow) var(--ease-smooth);
+  }
+  .amenity-box:hover .icon-badge {
+    background: linear-gradient(145deg, rgba(201,168,76,0.22) 0%, rgba(201,168,76,0.10) 100%);
+    border-color: rgba(201,168,76,0.45);
+    transform: scale(1.06) rotate(-3deg);
+    box-shadow: 0 6px 20px rgba(201,168,76,0.2);
+  }
+
+  /* ── Room card image zoom ──────────────────────────────── */
+  .room-img-wrap {
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    flex-shrink: 0;
+  }
+  .room-img-wrap img {
+    transition: transform 0.65s var(--ease-out);
+    will-change: transform;
+  }
+  .gold-card:hover .room-img-wrap img { transform: scale(1.05); }
+
+  /* ── Testimonial quote mark ────────────────────────────── */
+  .quote-mark {
+    font-family: var(--font-display);
+    font-size: 80px;
+    line-height: 0.75;
+    color: rgba(201,168,76,0.10);
+    position: absolute;
+    top: 14px; left: 18px;
+    pointer-events: none;
+    user-select: none;
+    font-feature-settings: "swsh" 1;
+  }
+
+  /* ── Separator ─────────────────────────────────────────── */
+  .sep { height: 1px; background: var(--clr-border); width: 100%; }
+  .sep-gold { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.35), transparent); }
+
+  /* ── Skeleton pulse ────────────────────────────────────── */
+  @keyframes skeleton-pulse {
+    0%,100% { opacity: 0.5; }
+    50%     { opacity: 0.9; }
+  }
+  .skeleton { animation: skeleton-pulse 1.8s ease-in-out infinite; }
+
+  /* ── Slide-down mobile menu animation ──────────────────── */
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  /* slideDown removed — menu now uses full-screen inset */
+
+  /* ── Toast notification ────────────────────────────────── */
+  #toast {
+    position: fixed; bottom: 28px; right: 28px; z-index: 9999;
+    background: #1a1a22;
+    border: 1px solid rgba(74,222,128,0.35);
+    border-radius: var(--r-lg);
+    padding: 16px 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(74,222,128,0.1);
+    display: flex; align-items: center; gap: 12px;
+    min-width: 290px; max-width: 360px;
+    opacity: 0; transform: translateY(16px) scale(0.96);
+    transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-spring);
+    pointer-events: none;
+  }
+  #toast.show {
+    opacity: 1; transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+  #toast-icon {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: rgba(74,222,128,0.12);
+    border: 1px solid rgba(74,222,128,0.25);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* ── Pricing emphasis ──────────────────────────────────── */
+  .price-tag { position: relative; display: inline-flex; align-items: baseline; gap: 5px; }
+  .price-tag__currency { font-size: 16px; color: var(--clr-gold); font-family: var(--font-body); font-weight: 600; line-height: 1; }
+  .price-tag__amount   { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--clr-gold); line-height: 1; }
+  .price-tag__period   { font-size: 11.5px; color: var(--clr-text-4); font-family: var(--font-body); }
+
+  /* ═══════════════════════════════════════════════════════════
+     SUBTLE INTERACTION LAYER
+     "Not crazy. Just quality." — hover lifts, smooth reveals,
+     staggered entries, responsive buttons, image fades.
+  ═══════════════════════════════════════════════════════════ */
+
+  /* ── Staggered grid children ───────────────────────────── */
+  /* Add class="stagger-children" to any grid/flex container  */
+  .stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity   0.55s var(--ease-out),
+      transform 0.55s var(--ease-out);
+  }
+  .stagger-children.in-view > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay:  0ms; }
+  .stagger-children.in-view > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay: 80ms; }
+  .stagger-children.in-view > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay:160ms; }
+  .stagger-children.in-view > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay:240ms; }
+  .stagger-children.in-view > *:nth-child(5) { opacity:1; transform:translateY(0); transition-delay:300ms; }
+  .stagger-children.in-view > *:nth-child(6) { opacity:1; transform:translateY(0); transition-delay:360ms; }
+  .stagger-children.in-view > *:nth-child(n+7) { opacity:1; transform:translateY(0); transition-delay:400ms; }
+
+  /* ── Button ripple removed — caused square flash on Android ── */
+
+  /* ── Image fade-in on load ─────────────────────────────── */
+  img[data-fade] {
+    opacity: 0;
+    transition: opacity 0.5s var(--ease-smooth);
+    will-change: opacity;
+  }
+  img[data-fade].img-loaded { opacity: 1; }
+
+  /* ── Footer links — sweep underline ───────────────────── */
+  .footer-link {
+    color: var(--clr-text-3);
+    text-decoration: none;
+    font-size: 13.5px;
+    line-height: 1.8;
+    position: relative;
+    display: inline-block;
+    transition: color var(--t-base) var(--ease-smooth);
+  }
+  .footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: linear-gradient(90deg, var(--clr-gold-dark), var(--clr-gold-light));
+    transition: width var(--t-slow) var(--ease-out);
+  }
+  .footer-link:hover               { color: var(--clr-gold-light); }
+  .footer-link:hover::after        { width: 100%; }
+
+  /* ── Card inner glow on hover ──────────────────────────── */
+  .gold-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.07) 0%, transparent 65%);
+    opacity: 0;
+    transition: opacity var(--t-slow) var(--ease-smooth);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .gold-card:hover::after { opacity: 1; }
+  /* Keep card content above the glow layer */
+  .gold-card > * { position: relative; z-index: 1; }
+
+  /* ── Amenity icon pulse on parent hover ────────────────── */
+  @keyframes icon-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.45); }
+    70%  { box-shadow: 0 0 0 9px rgba(201,168,76,0); }
+    100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+  }
+  .amenity-box:hover .icon-badge { animation: icon-pulse 0.55s ease-out; }
+
+  /* ── Smooth active press for ALL interactive elements ──── */
+  button:active, a.btn-gold:active, a.btn-outline:active, a.btn-neon:active {
+    transform: scale(0.97) !important;
+    transition-duration: 80ms !important;
+  }
+
+  /* ── Stat counter — tabular nums for clean counting ───── */
+  .count-up { font-variant-numeric: tabular-nums; }
+
+  /* ── Scroll progress bar ───────────────────────────────── */
+  #scroll-progress {
+    position: fixed; top: 0; left: 0;
+    height: 2px; width: 0%;
+    background: linear-gradient(90deg, var(--clr-gold-dark), var(--clr-gold-light), var(--clr-gold-dark));
+    z-index: 9999;
+    transition: width 0.1s linear;
+    box-shadow: 0 0 8px rgba(201,168,76,0.5);
+  }
+
+  /* ── Navbar: clean minimal bar on scroll — like PureFlow reference ─ */
+  /* No backdrop-filter: it causes blur to bleed visibly on the sides   */
+  /* on desktop. Instead: transparent at top, clean dark bar on scroll. */
+  #navbar {
+    background:    transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow:    none;
+    transition:
+      background          0.4s ease,
+      border-bottom-color 0.4s ease;
+  }
+  #navbar.nav-glass {
+    /* Solid dark tint only — NO backdrop-filter on the header itself.
+       Blur lives exclusively inside the capsule pill (.nav-pill-wrap). */
+    background:          rgba(10, 10, 13, 0.90);
+    border-bottom-color: rgba(201, 168, 76, 0.10);
+    box-shadow:          none;
+  }
+
+  /* ── Nav link active class via JS ─────────────────────── */
+  .nav-link.active {
+    color: var(--clr-gold-light) !important;
+  }
+  .nav-link.active::after { width: 100% !important; left: 0 !important; }
+
+  /* ── Floating capsule nav pill items — desktop ─────────
+     Each link sits inside the outer pill. On hover/active
+     it gets its own inner sub-capsule — like PureFlow.    */
+  .nav-pill-item {
+    position:      relative;
+    font-size:     13px;
+    font-weight:   500;
+    letter-spacing: 0.03em;
+    color:         rgba(220, 215, 200, 0.75);
+    padding:       6px 14px;
+    border-radius: 999px;
+    white-space:   nowrap;
+    text-decoration: none;
+    transition:    color 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  }
+  .nav-pill-item:hover {
+    color:      #e8c870;
+    background: rgba(201, 168, 76, 0.12);
+  }
+  /* ── Desktop only: slim down nav pill and logo text ───────
+     Mobile sizes (above) stay 100% untouched.               */
+  @media (min-width: 1024px) {
+    .logo-brand__name { font-size: 14px; }
+    .logo-brand__sub  { font-size: 7.5px; letter-spacing: 0.18em; }
+    .nav-pill-item    { font-size: 12px; padding: 4px 11px; }
+    .nav-pill-wrap    { padding: 3px 4px !important; }
+
+    /* ── Remove the full-width stretched background rectangle on desktop.
+       On mobile the solid dark bar is correct (no capsule there).
+       On desktop the capsule pill (.nav-pill-wrap) carries its own
+       background, so the header bar must stay transparent at all times. */
+    #navbar.nav-glass {
+      background:          transparent !important;
+      border-bottom-color: transparent !important;
+    }
+  }
+
+  /* ── Reduced motion safety ─────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .stagger-children > * { opacity: 1; transform: none; }
+    .shimmer-line { animation: none; background: var(--clr-gold); opacity: 0.4; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ── Mobile tweaks ─────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .logo-brand__sub { display: none; }
+    #toast { left: 16px; right: 16px; bottom: 16px; min-width: unset; }
+    .quote-mark { font-size: 56px; }
+  }
+  @media (max-width: 480px) {
+    .price-tag__amount { font-size: 22px; }
+    .icon-badge { width: 44px; height: 44px; }
+  }
+
+  /* ── Prose body text ───────────────────────────────────── */
+  .prose-body {
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: var(--clr-text-2);
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Section title rhythm ──────────────────────────────── */
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--clr-text-1);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── Hover image zoom ──────────────────────────────────── */
+  .img-zoom {
+    overflow: hidden;
+  }
+  .img-zoom img {
+    transition: transform 0.7s var(--ease-out);
+    will-change: transform;
+  }
+  .img-zoom:hover img {
+    transform: scale(1.05);
+  }
+
+  /* ── Price badge ───────────────────────────────────────── */
+  .price-display {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    line-height: 1;
+  }
+  .price-display__amount {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--clr-gold);
+    letter-spacing: -0.01em;
+  }
+  .price-display__unit {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--clr-text-4);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Free cancellation pill ────────────────────────────── */
+  .free-cancel {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--clr-green);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Card image frame ──────────────────────────────────── */
+  .card-img-frame {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .card-img-frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.7s var(--ease-out);
+    will-change: transform;
+  }
+  .gold-card:hover .card-img-frame img {
+    transform: scale(1.04);
+  }
+
+  /* ── Mobile responsive tweaks ──────────────────────────── */
+  @media (max-width: 640px) {
+    .section-title { letter-spacing: -0.005em; }
+    .btn-gold, .btn-outline, .btn-neon {
+      font-size: 12px;
+      letter-spacing: 0.06em;
+    }
+    .prose-body { font-size: 14px; line-height: 1.75; }
+  }
+
+  /* ── Location tracker map: responsive height ───────────── */
+  @media (max-width: 768px) {
+    /* Disable sticky on mobile to avoid iOS overflow clipping */
+    .location-tracker-sticky { position: static !important; top: auto !important; }
+  }
+  @media (max-width: 480px) {
+  }
+
+  /* ── Hero background: smooth reveal animation ──────────── */
+  @keyframes heroBgReveal {
+    from { transform: scale(1.07); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+  }
+  #heroBg {
+    animation: heroBgReveal 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity;
+  }
+
+
+  /* Info window dark theme */
+  .gm-style .gm-style-iw-c {
+    background: #18181d !important;
+    border: 1px solid #3a3a46 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.55) !important;
+    color: #e8e4d8;
+    padding: 0 !important;
+  }
+  .gm-style .gm-style-iw-t::after {
+    background: #18181d !important;
+  }
+  .gm-style-iw-d { overflow: hidden !important; }
+
+  /* ═══════════════════════════════════════════════════════════
+     PRELOADER — Ultra-luxury intro screen
+     10Kobo Hotel & Suites — v14 upgrade
+  ═══════════════════════════════════════════════════════════ */
+
+  /* Lock scroll while preloader is active */
+  body.preloader-active { overflow: hidden; }
+
+  /* ── Full-screen overlay ─────────────────────────────────── */
+  #preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  #preloader.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* ── Content column ──────────────────────────────────────── */
+  #pl-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    animation: plContentIn 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes plContentIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Coin logo — soft gold ambient glow + elegant pulse ──── */
+  #pl-logo {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 36px;
+    animation: plLogoPulse 2.8s ease-in-out infinite;
+    filter:
+      drop-shadow(0 0 16px rgba(212,175,55,0.5))
+      drop-shadow(0 0 40px rgba(212,175,55,0.22));
+  }
+  @keyframes plLogoPulse {
+    0%, 100% {
+      filter:
+        drop-shadow(0 0 14px rgba(212,175,55,0.45))
+        drop-shadow(0 0 36px rgba(212,175,55,0.18));
+      transform: scale(1);
+    }
+    50% {
+      filter:
+        drop-shadow(0 0 26px rgba(212,175,55,0.72))
+        drop-shadow(0 0 60px rgba(212,175,55,0.32));
+      transform: scale(1.04);
+    }
+  }
+
+  /* ── Welcome text — thin serif, premium gold, wide tracking ─ */
+  #pl-welcome {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #D4AF37;
+    margin-bottom: 28px;
+    animation: plContentIn 1.1s 0.18s cubic-bezier(0.16, 1, 0.3, 1) both;
+    /* Force lining numerals so "10" sits at the same cap-height
+       as the surrounding uppercase letters. Cormorant Garamond
+       defaults to old-style figures which render smaller and at
+       a different baseline — lnum + tnum fixes this entirely. */
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1, "kern" 1;
+  }
+
+  /* ── Razor-thin gold loading line — NO container box ────── */
+  #pl-line-wrap {
+    width: 200px;
+    height: 1px;
+    background: rgba(212,175,55,0.1);
+    position: relative;
+    overflow: hidden;
+    animation: plContentIn 1.1s 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  #pl-line-fill {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212,175,55,0.5) 30%,
+      #D4AF37 55%,
+      rgba(212,175,55,0.5) 80%,
+      transparent 100%
+    );
+    animation: plLineSweep 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes plLineSweep {
+    0%   { left: -60%; }
+    100% { left: 140%; }
+  }
+
+  /* ── Main content reveal wrapper ─────────────────────────── */
+  #main-content-wrapper {
+    position: relative;
+    z-index: 0;              /* explicit z-index keeps it BELOW the fixed navbar */
+    opacity: 0;
+    transform: scale(0.982) translateZ(0);
+    transition:
+      opacity   1.1s 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1.1s 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  #main-content-wrapper.content-visible {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+  }
+
+  /* ── Reduced-motion: skip all preloader animation ────────── */
+  @media (prefers-reduced-motion: reduce) {
+    #preloader { transition-duration: 0.01ms !important; }
+    #pl-logo { animation: none !important; }
+    #pl-content, #pl-welcome, #pl-line-wrap { animation: none !important; opacity: 1; transform: none; }
+    #pl-line-fill { animation: none !important; }
+    #main-content-wrapper { transition-duration: 0.01ms !important; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     GALLERY & LIGHTBOX — moved here from mid-body to fix
+     HTML validity and prevent flash-of-unstyled-content (FOUC)
+  ═══════════════════════════════════════════════════════════ */
+
+  /* ── Gallery Section ─────────────────────────────────────── */
+  #gallery { position: relative; overflow: hidden; }
+
+  /* Viewport + track */
+  .glry-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    cursor: grab;
+  }
+  .glry-viewport:active { cursor: grabbing; }
+  .glry-track {
+    display: flex;
+    will-change: transform;
+    transition: transform 0.68s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glry-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .glry-slide-inner {
+    width: 100%;
+    height: clamp(260px, 52vw, 580px);
+    background: #0c0c0e;
+    border: 1px solid #1e1e26;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.4s ease;
+  }
+  @media (max-width: 768px) {
+    .glry-slide-inner { height: clamp(220px, 72vw, 480px); }
+  }
+  .glry-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
+  }
+  .glry-slide-inner:hover img { transform: scale(1.03); }
+  .glry-expand-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  .glry-slide-inner:hover .glry-expand-icon { opacity: 1; }
+  .glry-expand-icon span {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(12,12,14,0.72);
+    border: 1.5px solid rgba(201,168,76,0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+  }
+  .glry-slide-inner:hover .glry-expand-icon span {
+    transform: scale(1.08);
+    box-shadow: 0 0 22px rgba(201,168,76,0.45);
+  }
+
+  /* ── Gallery Dots ─────────────────────────────────────────── */
+  .glry-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .glry-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2a2a36;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.35s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;
+    flex-shrink: 0;
+    outline: none;
+  }
+  .glry-dot:hover { background: rgba(201,168,76,0.45); transform: scale(1.2); }
+  .glry-dot.active {
+    background: linear-gradient(135deg, #e8c870, #c9a84c);
+    transform: scale(1.35);
+    box-shadow: 0 0 10px rgba(201,168,76,0.7), 0 0 20px rgba(201,168,76,0.35), 0 0 0 3px rgba(201,168,76,0.18);
+  }
+
+  /* ── Lightbox ─────────────────────────────────────────────── */
+  #glry-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.38s cubic-bezier(0.4,0,0.2,1);
+  }
+  #glry-lightbox.lb-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .lb-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(6,6,10,0.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+  /* Top padding gives the absolute-positioned lb-close button room
+     above the image without being clipped by the container edge. */
+  .lb-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: min(90vw, 1160px);
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 36px 16px 16px;
+  }
+  /* height:auto + max-height on img lets object-fit:contain work
+     correctly across all aspect ratios without a fixed parent height. */
+  .lb-img-wrap {
+    width: 100%;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid rgba(201,168,76,0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lb-img-wrap img {
+    width: 100%;
+    height: auto;
+    max-height: 72vh;
+    object-fit: contain;
+    display: block;
+    opacity: 0;
+    transform: scale(0.97);
+    transition: opacity 0.38s ease, transform 0.38s cubic-bezier(0.16,1,0.3,1);
+  }
+  .lb-img-wrap img.lb-img-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .lb-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+  .lb-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(20,20,26,0.85);
+    border: 1.5px solid rgba(201,168,76,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease;
+    flex-shrink: 0;
+    outline: none;
+  }
+  .lb-btn:hover {
+    background: rgba(201,168,76,0.14);
+    border-color: var(--clr-gold);
+    transform: scale(1.1);
+    box-shadow: 0 0 18px rgba(201,168,76,0.35);
+  }
+  .lb-close {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(20,20,26,0.9);
+    border: 1.5px solid rgba(201,168,76,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: border-color 0.25s ease, transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease;
+    outline: none;
+    flex-shrink: 0;
+  }
+  .lb-close:hover {
+    border-color: var(--clr-gold);
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 0 14px rgba(201,168,76,0.3);
+  }
+  .lb-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  .lb-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.22);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    transition: background 0.3s ease, transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .lb-dot.active {
+    background: var(--clr-gold);
+    transform: scale(1.4);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     HEADER & FOOTER — Mobile-optimised tap / hover glows
+     Strategy: :active fires instantly on touch (no stuck-hover
+     bug). 120ms on press, releases clean on finger-lift.
+     -webkit-tap-highlight-color removed so our glow shows.
+     JS touchstart/touchend listeners added for iOS Safari
+     reliability (CSS :active alone can be delayed on iOS).
+  ═══════════════════════════════════════════════════════════ */
+
+  /* ── Prevent default blue flash on all nav/footer taps ───── */
+  nav a, nav button, footer a, footer button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* ── 1. Header logo coin: gold aura on tap/hover ─────────── */
+  .logo-wrap .logo-coin-glow {
+    transition: filter 0.25s ease, box-shadow 0.25s ease;
+  }
+  .logo-wrap:hover .logo-coin-glow {
+    filter: drop-shadow(0 0 20px rgba(212,175,55,0.70));
+    box-shadow: 0 0 0 2px rgba(212,175,55,0.55), 0 0 28px rgba(212,175,55,0.45);
+  }
+  /* JS adds this class on touchstart for instant iOS response */
+  .logo-wrap.logo-tap-active .logo-coin-glow {
+    filter: drop-shadow(0 0 20px rgba(212,175,55,0.70));
+    box-shadow: 0 0 0 2px rgba(212,175,55,0.55), 0 0 28px rgba(212,175,55,0.45);
+    transition: filter 0ms, box-shadow 0ms;
+  }
+
+  /* Footer logo wrapped in .footer-logo-link <a> (see HTML) */
+  .footer-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .footer-logo-link:hover .footer-logo-coin,
+  .footer-logo-link:active .footer-logo-coin {
+    filter: drop-shadow(0 0 20px rgba(212,175,55,0.70));
+    box-shadow:
+      0 0 0 1.5px rgba(212,175,55,0.5),
+      0 0 28px rgba(212,175,55,0.45);
+  }
+  .footer-logo-link:active .footer-logo-coin {
+    transition: filter 0ms, box-shadow 0ms;
+  }
+  /* JS adds this class on touchstart */
+  .footer-logo-link.footer-logo-tap-active .footer-logo-coin {
+    filter: drop-shadow(0 0 20px rgba(212,175,55,0.70));
+    box-shadow: 0 0 0 1.5px rgba(212,175,55,0.5), 0 0 28px rgba(212,175,55,0.45);
+    transition: filter 0ms, box-shadow 0ms;
+  }
+
+  /* ── 2. Desktop nav links: gold softglow background ──────── */
+  .nav-link {
+    border-radius: 6px;
+    transition:
+      color      var(--t-base)  var(--ease-smooth),
+      background 120ms ease;
+  }
+  .nav-link:hover  { background: rgba(212,175,55,0.09); }
+  .nav-link:active {
+    background: rgba(212,175,55,0.16);
+    transition: background 0ms;
+  }
+
+  /* ── 3. Mobile menu rows: full-width gold tap glow ───────── */
+  #mobile-menu .nav-link {
+    border-radius: 8px;
+    padding-left:  10px;
+    padding-right: 10px;
+    display: block;
+  }
+  #mobile-menu .nav-link:active {
+    background: rgba(212,175,55,0.14);
+    box-shadow: inset 0 0 24px rgba(212,175,55,0.07);
+    transition: background 0ms, box-shadow 0ms;
+  }
+
+  /* ── 4. Burger/hamburger button: gold flash on tap ───────── */
+  #burger {
+    border-radius: 8px;
+    transition: background 120ms ease, box-shadow 120ms ease;
+  }
+  #burger:active {
+    background: rgba(212,175,55,0.14);
+    box-shadow: 0 0 20px rgba(212,175,55,0.30);
+    transition: background 0ms, box-shadow 0ms;
+  }
+
+  /* ── 5. btn-gold: amplified gold pulse on tap ────────────── */
+  .btn-gold:active {
+    box-shadow:
+      0 0 0 3px  rgba(212,175,55,0.30),
+      0 0 32px   rgba(212,175,55,0.65) !important;
+    transition: box-shadow 0ms !important;
+  }
+
+  /* ── 6. btn-outline: gold fill + glow on tap ─────────────── */
+  .btn-outline:hover  {
+    background: rgba(212,175,55,0.07);
+  }
+  .btn-outline:active {
+    background:   rgba(212,175,55,0.14) !important;
+    border-color: rgba(212,175,55,0.75) !important;
+    box-shadow:   0 0 22px rgba(212,175,55,0.35) !important;
+    transition: background 0ms, border-color 0ms, box-shadow 0ms !important;
+  }
+
+  /* ── 7. Header phone/call link ───────────────────────────── */
+  .nav-link[href^="tel"]:hover  { background: rgba(212,175,55,0.09); }
+  .nav-link[href^="tel"]:active {
+    background: rgba(212,175,55,0.16);
+    box-shadow: 0 0 18px rgba(212,175,55,0.22);
+    transition: background 0ms, box-shadow 0ms;
+  }
+
+  /* ── 8. Footer links: gold background softglow ───────────── */
+  .footer-link {
+    border-radius: 4px;
+    padding-left:  5px;
+    padding-right: 5px;
+    margin-left:  -5px;
+    transition:
+      color      var(--t-base) var(--ease-smooth),
+      background 120ms ease;
+  }
+  .footer-link:hover  {
+    background: rgba(212,175,55,0.10);
+    color: var(--clr-gold-light);
+  }
+  .footer-link:active {
+    background: rgba(212,175,55,0.18);
+    color: var(--clr-gold-light);
+    transition: background 0ms, color 0ms;
+  }
+
+  /* ── 9. Footer social icon buttons ───────────────────────── */
+  .footer-social-btn {
+    transition:
+      border-color 150ms ease,
+      background   150ms ease,
+      box-shadow   150ms ease;
+  }
+  .footer-social-btn:hover {
+    border-color: rgba(212,175,55,0.55) !important;
+    background:   rgba(212,175,55,0.12) !important;
+    box-shadow:   0 0 18px rgba(212,175,55,0.28) !important;
+  }
+  .footer-social-btn:active {
+    border-color: rgba(212,175,55,0.80) !important;
+    background:   rgba(212,175,55,0.20) !important;
+    box-shadow:   0 0 26px rgba(212,175,55,0.50) !important;
+    transition: border-color 0ms, background 0ms, box-shadow 0ms !important;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     COMPILED TAILWIND UTILITIES — Production Build
+     Replaces cdn.tailwindcss.com — zero external dependencies
+     All utilities extracted exactly from this file's class usage
+  ═══════════════════════════════════════════════════════════ */
+
+  /* ── Display & Layout ────────────────────── */
+  .block          { display: block; }
+  .flex           { display: flex; }
+  .grid           { display: grid; }
+  .hidden         { display: none; }
+  .relative       { position: relative; }
+  .flex-1         { flex: 1 1 0%; }
+  .flex-col       { flex-direction: column; }
+  .flex-shrink-0  { flex-shrink: 0; }
+  .flex-wrap      { flex-wrap: wrap; }
+  .items-center   { align-items: center; }
+  .items-start    { align-items: flex-start; }
+  .items-baseline { align-items: baseline; }
+  .justify-center  { justify-content: center; }
+  .justify-between { justify-content: space-between; }
+
+  /* ── Spacing — Margin ────────────────────── */
+  .mx-auto  { margin-left: auto; margin-right: auto; }
+  .ml-auto  { margin-left: auto; }
+  .mt-1     { margin-top: 0.25rem; }
+  .mt-1\.5  { margin-top: 0.375rem; }
+  .mt-10    { margin-top: 2.5rem; }
+  .mt-14    { margin-top: 3.5rem; }
+  .mb-3     { margin-bottom: 0.75rem; }
+  .mb-4     { margin-bottom: 1rem; }
+  .mb-8     { margin-bottom: 2rem; }
+  .mb-10    { margin-bottom: 2.5rem; }
+  .mb-12    { margin-bottom: 3rem; }
+  .mb-14    { margin-bottom: 3.5rem; }
+  .mb-16    { margin-bottom: 4rem; }
+
+  /* ── Spacing — Padding ───────────────────── */
+  .p-4      { padding: 1rem; }
+  .p-5      { padding: 1.25rem; }
+  .p-7      { padding: 1.75rem; }
+  .p-8      { padding: 2rem; }
+  .px-2     { padding-left: 0.5rem;   padding-right: 0.5rem; }
+  .px-5     { padding-left: 1.25rem;  padding-right: 1.25rem; }
+  .px-6     { padding-left: 1.5rem;   padding-right: 1.5rem; }
+  .px-8     { padding-left: 2rem;     padding-right: 2rem; }
+  .py-1\.5  { padding-top: 0.375rem;  padding-bottom: 0.375rem; }
+  .py-2     { padding-top: 0.5rem;    padding-bottom: 0.5rem; }
+  .py-3     { padding-top: 0.75rem;   padding-bottom: 0.75rem; }
+  .py-3\.5  { padding-top: 0.875rem;  padding-bottom: 0.875rem; }
+  .py-4     { padding-top: 1rem;      padding-bottom: 1rem; }
+  .py-20    { padding-top: 5rem;      padding-bottom: 5rem; }
+  .py-28    { padding-top: 7rem;      padding-bottom: 7rem; }
+
+  /* ── Gap ─────────────────────────────────── */
+  .gap-1    { gap: 0.25rem; }
+  .gap-3    { gap: 0.75rem; }
+  .gap-4    { gap: 1rem; }
+  .gap-6    { gap: 1.5rem; }
+  .gap-10   { gap: 2.5rem; }
+  .gap-16   { gap: 4rem; }
+
+  /* ── Sizing — Width ──────────────────────── */
+  .w-4      { width: 1rem; }
+  .w-6      { width: 1.5rem; }
+  .w-9      { width: 2.25rem; }
+  .w-10     { width: 2.5rem; }
+  .w-14     { width: 3.5rem; }
+  .w-full   { width: 100%; }
+  .max-w-2xl{ max-width: 42rem; }
+  .max-w-7xl{ max-width: 80rem; }
+
+  /* ── Sizing — Height ─────────────────────── */
+  .h-0\.5   { height: 0.125rem; }
+  .h-9       { height: 2.25rem; }
+  .h-10      { height: 2.5rem; }
+  .h-14      { height: 3.5rem; }
+  .h-full    { height: 100%; }
+
+  /* ── Grid ────────────────────────────────── */
+  .grid-cols-1 { grid-template-columns: repeat(1, minmax(0,1fr)); }
+  .grid-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+  /* ── Border Radius ───────────────────────── */
+  .rounded-sm   { border-radius: 0.125rem; }
+  .rounded-lg   { border-radius: 0.5rem; }
+  .rounded-xl   { border-radius: 0.75rem; }
+  .rounded-2xl  { border-radius: 1rem; }
+  .rounded-full { border-radius: 9999px; }
+
+  /* ── Overflow ────────────────────────────── */
+  .overflow-hidden { overflow: hidden; }
+
+  /* ── Typography ──────────────────────────── */
+  .text-sm           { font-size: 0.875rem; line-height: 1.25rem; }
+  .text-xl           { font-size: 1.25rem;  line-height: 1.75rem; }
+  .text-center       { text-align: center; }
+  .text-left         { text-align: left; }
+  .font-medium       { font-weight: 500; }
+  .font-semibold     { font-weight: 600; }
+  .uppercase         { text-transform: uppercase; }
+  .whitespace-nowrap { white-space: nowrap; }
+  .tracking-wide     { letter-spacing: 0.025em; }
+  .tracking-wider    { letter-spacing: 0.05em; }
+  .tracking-widest   { letter-spacing: 0.1em; }
+
+  /* ── Colour ──────────────────────────────── */
+  .bg-charcoal                { background-color: #0c0c0e; }
+  .bg-zinc-900                { background-color: #18181b; }
+  .bg-\[\#c9a84c\]            { background-color: #c9a84c; }
+  .text-\[\#0c0c0e\]          { color: #0c0c0e; }
+  .text-zinc-300              { color: #d4d4d8; }
+  .hover\:text-\[\#c9a84c\]:hover       { color: #c9a84c; }
+  .hover\:bg-\[\#b0923a\]:hover         { background-color: #b0923a; }
+  .hover\:bg-\[\#c9a84c\]\/10:hover     { background-color: rgba(201,168,76,0.10); }
+
+  /* ── Borders ─────────────────────────────── */
+  .border                           { border-width: 1px; border-style: solid; }
+  .border-t                         { border-top-width: 1px; border-top-style: solid; }
+  .border-white\/\[0\.06\]          { border-color: rgba(255,255,255,0.06); }
+  .border-zinc-800                  { border-color: #27272a; }
+  .border-\[\#D4AF37\]              { border-color: #D4AF37; }
+  .border-\[\#D4AF37\]\/40          { border-color: rgba(212,175,55,0.40); }
+  .border-\[\#c9a84c\]\/30          { border-color: rgba(201,168,76,0.30); }
+  .hover\:border-\[\#c9a84c\]\/70:hover { border-color: rgba(201,168,76,0.70); }
+
+  /* ── Shadows ─────────────────────────────── */
+  .shadow-md { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
+  .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
+  .shadow-\[0_0_15px_rgba\(212\,175\,55\,0\.4\)\]              { box-shadow: 0 0 15px rgba(212,175,55,0.4); }
+  .hover\:shadow-\[0_8px_24px_rgba\(201\,168\,76\,0\.35\)\]:hover { box-shadow: 0 8px 24px rgba(201,168,76,0.35); }
+
+  /* ── Object / Background ─────────────────── */
+  .object-cover  { object-fit: cover; }
+  .object-center { object-position: center; }
+  .bg-cover      { background-size: cover; }
+  .bg-center     { background-position: center; }
+  .bg-no-repeat  { background-repeat: no-repeat; }
+  .scale-\[1\.38\] { transform: scale(1.38); }
+
+  /* ── Misc ────────────────────────────────── */
+  .z-10              { z-index: 10; }
+  .transition-all    { transition-property: all; transition-timing-function: cubic-bezier(0.4,0,0.2,1); transition-duration: 150ms; }
+  .transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4,0,0.2,1); transition-duration: 150ms; }
+  .duration-200      { transition-duration: 200ms; }
+  .duration-300      { transition-duration: 300ms; }
+  .focus\:outline-none:focus                        { outline: none; }
+  .focus-visible\:ring-2:focus-visible              { box-shadow: 0 0 0 2px rgba(201,168,76,0.30); }
+  .focus-visible\:ring-\[\#c9a84c\]\/60:focus-visible { box-shadow: 0 0 0 2px rgba(201,168,76,0.60); }
+
+  /* ── Responsive md (≥768px) ──────────────── */
+  @media (min-width: 768px) {
+    .md\:col-span-2  { grid-column: span 2 / span 2; }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+  }
+
+  /* ── Responsive lg (≥1024px) ─────────────── */
+  @media (min-width: 1024px) {
+    .lg\:flex        { display: flex; }
+    .lg\:hidden      { display: none; }
+    .lg\:h-12        { height: 3rem; }
+    .lg\:h-8         { height: 2rem; }
+    .lg\:w-8         { width: 2rem; }
+    .lg\:mt-0        { margin-top: 0; }
+    .lg\:px-10       { padding-left: 2.5rem; padding-right: 2.5rem; }
+    .lg\:gap-6       { gap: 1.5rem; }
+    .lg\:gap-16      { gap: 4rem; }
+    .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     POLISH LAYER — global refinements (typography, a11y, motion)
+     Added without altering the existing design system above.
+  ═══════════════════════════════════════════════════════════ */
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+  img, svg, video { max-width: 100%; height: auto; }
+  img { image-rendering: -webkit-optimize-contrast; }
+  ::selection { background: var(--clr-gold); color: #0c0c0e; }
+  ::-moz-selection { background: var(--clr-gold); color: #0c0c0e; }
+
+  /* Refined focus ring — visible only for keyboard users */
+  :focus { outline: none; }
+  :focus-visible {
+    outline: 2px solid var(--clr-gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Elegant native scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: #07070b; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--clr-gold-dark), var(--clr-gold));
+    border-radius: 10px;
+    border: 2px solid #07070b;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--clr-gold-light); }
+  html { scrollbar-color: var(--clr-gold) #07070b; scrollbar-width: thin; }
+
+  /* Accessibility — respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .particle, .shimmer-line { display: none !important; }
+  }
+
+  /* Print — clean, ink-friendly fallback */
+  @media print {
+    body { background: #fff !important; color: #000 !important; }
+    #navbar, #preloader, .particle, footer { display: none !important; }
+    section { page-break-inside: avoid; background: #fff !important; }
+    a { color: #000 !important; text-decoration: underline; }
+  }
+
+  /* Subtle lift on every image card across the site */
+  img { transition: filter 0.4s var(--ease-smooth, ease); }
+</style>
+</head>
+<body class="bg-charcoal preloader-active">
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRELOADER — Ultra-luxury intro · 10Kobo Hotel & Suites
+     Position: immediately after <body> opening tag
+     Do not move or reorder this block.
+═══════════════════════════════════════════════════════════ -->
+<div id="preloader" role="status" aria-label="Loading 10Kobo Hotel and Suites" aria-live="polite">
+
+  <!-- Centred branding content -->
+  <div id="pl-content">
+
+    <!-- Official coin logo — gold ambient glow + slow elegant pulse -->
+    <img id="pl-logo" src="logo.png" alt="10Kobo Hotel &amp; Suites" aria-hidden="true">
+
+    <!-- Premium welcome text — thin serif, wide tracking, gold -->
+    <p id="pl-welcome" class="uppercase">WELCOME TO 10 KOBO</p>
+
+    <!-- Razor-thin gold loading line — no box, no container -->
+    <div id="pl-line-wrap" role="progressbar" aria-label="Loading…">
+      <div id="pl-line-fill"></div>
+    </div>
+
+  </div>
+</div>
+<!-- ── END PRELOADER ───────────────────────────────────────── -->
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN CONTENT WRAPPER
+     This div starts invisible. The preloader JS reveals it
+     with a cinematic scale-up + fade once the page has loaded.
+══════════════════════════════════════════════════════════ -->
+<!-- Gold scroll-progress bar — fixed to viewport, OUTSIDE wrapper -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION SYSTEM — 10Kobo Hotel & Suites
+     Positioned OUTSIDE #main-content-wrapper so position:fixed
+     is anchored to the viewport, not the transformed wrapper.
+     Header bar:  transparent at top → liquid glass on scroll
+     Desktop:     floating liquid pill + active dark-capsule state
+     Mobile:      full-screen ice takeover + burger → X morph
+═══════════════════════════════════════════════════════════════════ -->
+
+<!-- ── Pinned header bar ───────────────────────────────────────── -->
+<header id="navbar"
+  class="h-14 lg:h-12"
+  style="position:fixed !important; top:0; left:0; width:100%; z-index:9000;">
+
+  <div class="w-full max-w-7xl mx-auto h-full px-6 flex items-center justify-between gap-4">
+
+    <!-- ── LEFT: Logo — standalone ────────────────────────────────── -->
+    <a href="#hero" class="logo-wrap flex-shrink-0" aria-label="10Kobo Hotel and Suites — Home">
+      <div class="logo-coin-glow w-9 h-9 lg:w-8 lg:h-8 rounded-full overflow-hidden
+                  border border-[#D4AF37]/40">
+        <img src="logo.png" alt="10Kobo Hotel &amp; Suites logo"
+             class="w-full h-full object-cover scale-[1.38]"
+             onerror="this.closest('.logo-coin-glow').style.display='none'; this.closest('.logo-wrap').querySelector('.logo-coin-fallback').style.display='flex';">
+      </div>
+      <!-- Fallback initials coin if logo.png is missing -->
+      <div class="logo-coin-fallback"
+           style="display:none; width:44px; height:44px; border-radius:50%;
+                  background:linear-gradient(135deg,#c9a84c,#a07830);
+                  align-items:center; justify-content:center; flex-shrink:0;">
+        <span style="font-family:'Cormorant Garamond',serif; font-weight:700;
+                     color:#0c0c0e; font-size:14px; line-height:1;">10K</span>
+      </div>
+      <div class="logo-brand">
+        <span class="logo-brand__name">10Kobo</span>
+        <span class="logo-brand__sub">Hotel &amp; Suites</span>
+      </div>
+    </a>
+
+    <!-- ── CENTER: Floating capsule nav — desktop only ─────────────
+         One outer pill contains all links. Active/hover link gets
+         its own inner sub-capsule highlight — exactly like PureFlow. -->
+    <nav id="desktopNav" aria-label="Primary navigation"
+         class="hidden lg:flex items-center flex-1 justify-center">
+      <div class="nav-pill-wrap flex items-center gap-1 px-2 py-1.5 rounded-full"
+           style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12);">
+        <a href="#about"        data-section="about"        class="desk-nav-link nav-pill-item">About</a>
+        <a href="#rooms"        data-section="rooms"        class="desk-nav-link nav-pill-item">Rooms</a>
+        <a href="#amenities"    data-section="amenities"    class="desk-nav-link nav-pill-item">Amenities</a>
+        <a href="#nightlife"    data-section="nightlife"    class="desk-nav-link nav-pill-item">Nightlife</a>
+        <a href="#gallery"      data-section="gallery"      class="desk-nav-link nav-pill-item">Gallery</a>
+        <a href="#testimonials" data-section="testimonials" class="desk-nav-link nav-pill-item">Reviews</a>
+        <a href="#location"     data-section="location"     class="desk-nav-link nav-pill-item">Location</a>
+        <a href="#contact"      data-section="contact"      class="desk-nav-link nav-pill-item">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ── RIGHT: Phone icon + Gold CTA — standalone, desktop only ── -->
+    <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
+      <a href="tel:+2349166957914"
+         class="flex items-center justify-center w-9 h-9 rounded-full
+                border border-[#c9a84c]/30 hover:border-[#c9a84c]/70
+                transition-all duration-300 hover:bg-[#c9a84c]/10"
+         aria-label="Call 10Kobo Hotel">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+             fill="none" stroke="#c9a84c" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </a>
+      <a href="#rooms"
+         class="bg-[#c9a84c] hover:bg-[#b0923a] text-[#0c0c0e] font-semibold
+                rounded-full px-5 py-2 text-sm transition-all duration-300 whitespace-nowrap"
+         style="text-decoration:none;">
+        Book Your Stay
+      </a>
+    </div>
+
+    <!-- ── MOBILE/TABLET: Burger / X button (shows below lg) ────── -->
+    <button
+      id="burger"
+      class="lg:hidden flex flex-col justify-center items-center w-10 h-10 ml-auto rounded-lg"
+      style="background:transparent; border:none; outline:none; box-shadow:none;"
+      onclick="toggleMenu()"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Toggle navigation menu">
+      <span id="b1" class="block w-6 h-0.5 rounded-full transition-all duration-300" style="background:#c9a84c;"></span>
+      <span id="b2" class="block w-4 h-0.5 rounded-full mt-1.5 transition-all duration-300" style="background:#c9a84c;"></span>
+      <span id="b3" class="block w-6 h-0.5 rounded-full mt-1.5 transition-all duration-300" style="background:#c9a84c;"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ── Mobile drop-down drawer ────────────────────────────────────
+     PINNED: position:fixed in both CSS block AND inline style.
+     Drops straight down under the h-16 (4rem) header bar.
+     Glass blur ice sheet — no solid dark background.
+     Burger morphs to X — no separate close button.
+──────────────────────────────────────────────────────────────── -->
+<div id="mobile-menu"
+     class="border-t border-white/[0.06]"
+     style="position:fixed !important; top:3.5rem; left:0; width:100%;
+            max-height:calc(100vh - 3.5rem); z-index:8999; overflow-y:auto;
+            background:rgba(10,10,13,0.97);
+            display:none; flex-direction:column; align-items:stretch;">
+
+  <!-- Link stack — left-aligned, generous padding -->
+  <div class="flex flex-col gap-6 p-8 text-left w-full">
+
+    <a href="#about"        data-section="about"        onclick="toggleMenu()" class="mob-nav-link text-xl font-medium tracking-wide text-zinc-300 hover:text-[#c9a84c] transition-colors duration-200" style="text-decoration:none;">About</a>
+    <a href="#rooms"        data-section="rooms"        onclick="toggleMenu()" class="mob-nav-link text-xl font-medium tracking-wide text-zinc-300 hover:text-[#c9a84c] transition-colors duration-200" style="text-decoration:none;">Rooms</a>
+    <a href="#amenities"    data-section="amenities"    onclick="toggleMenu()" class="mob-nav-link text-xl font-medium tracking-wide text-zinc-300 hover:text-[#c9a84c] transition-colors duration-200" style="text-decoration:none;">Amenities</a>
+    <a href="#nightlife"    data-section="nightlife"    onclick="toggleMenu()" class="mob-nav-link text-xl font-medium tracking-wide text-zinc-300 hover:text-[#c9a84c] transition-colors duration-200" style="text-decoration:none;">Nightlife</a>
+    <a href="#gallery"      data-section="gallery"      onclick="toggleMenu()" class="mob-nav-link text-xl font-medium tracking-wide text-zinc-300 hover:text-[#c9a84c] transition-colors duration-200" style="text-decoration:none;">Gallery</a>
+    <a href="#testimonials" data-section="testimonials" onclick="toggleMenu()" class="mob-nav-link text-xl font-medium tracking-wide text-zinc-300 hover:text-[#c9a84c] transition-colors duration-200" style="text-decoration:none;">Reviews</a>
+    <a href="#location"     data-section="location"     onclick="toggleMenu()" class="mob-nav-link text-xl font-medium tracking-wide text-zinc-300 hover:text-[#c9a84c] transition-colors duration-200" style="text-decoration:none;">Location</a>
+    <a href="#contact"      data-section="contact"      onclick="toggleMenu()" class="mob-nav-link text-xl font-medium tracking-wide text-zinc-300 hover:text-[#c9a84c] transition-colors duration-200" style="text-decoration:none;">Contact</a>
+
+    <!-- Divider -->
+    <div style="width:100%; height:1px; background:rgba(255,255,255,0.06); margin:4px 0;"></div>
+
+    <!-- Gold CTA button -->
+    <a href="#rooms" onclick="toggleMenu()"
+       class="bg-[#c9a84c] hover:bg-[#b0923a] text-[#0c0c0e] font-semibold
+              rounded-full px-6 py-3.5 text-sm text-center
+              transition-all duration-300 w-full
+              shadow-md hover:shadow-[0_8px_24px_rgba(201,168,76,0.35)]"
+       style="text-decoration:none;">
+      Book Your Stay
+    </a>
+
+    <!-- Phone — fully visible gold, tappable, opens dialer -->
+    <a href="tel:+2349166957914"
+       style="display:flex; align-items:center; gap:10px;
+              color:#c9a84c; font-size:15px; font-weight:500;
+              text-decoration:none; padding:4px 0;"
+       aria-label="Call 10Kobo Hotel">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+           fill="none" stroke="#c9a84c" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      +234 916 695 7914
+    </a>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN CONTENT WRAPPER
+     This div starts invisible. The preloader JS reveals it
+     with a cinematic scale-up + fade once the page has loaded.
+══════════════════════════════════════════════════════════ -->
+<div id="main-content-wrapper">
+
+<!-- ═══════════════════════════════════════════
+     HERO SECTION — Full-Screen Photo Background
+═══════════════════════════════════════════ -->
+<section id="hero" class="bg-cover bg-center bg-no-repeat" style="min-height:100vh; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; background-color:#07070b;">
+
+  <!-- ── Full-screen background photo ── -->
+  <img
+    id="heroBg" src="file_00000000b5e071f492f7cb91c790fea0.png"
+    alt="10Kobo Hotel and Suites — Lagos"
+    style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center center; z-index:0; transform-origin:center center;">
+
+  <!-- ── Smooth bottom fade only — image displays at full brightness, no overlay ── -->
+  <div style="position:absolute; bottom:0; left:0; right:0; height:320px; z-index:4; background:linear-gradient(to bottom, transparent 0%, rgba(12,12,14,0.55) 50%, rgba(12,12,14,0.88) 80%, #0c0c0e 100%); pointer-events:none;"></div>
+
+  <!-- ── Floating gold particles ── -->
+  <div aria-hidden="true" class="particle" style="width:4px;height:4px;background:#c9a84c;top:18%;left:12%;animation:float1 6s ease-in-out infinite;opacity:0.55;z-index:3;"></div>
+  <div aria-hidden="true" class="particle" style="width:3px;height:3px;background:#e8ff47;top:65%;left:82%;animation:float2 8s ease-in-out infinite;opacity:0.45;z-index:3;"></div>
+  <div aria-hidden="true" class="particle" style="width:5px;height:5px;background:#c9a84c;top:78%;left:22%;animation:float1 7s ease-in-out infinite 1s;opacity:0.35;z-index:3;"></div>
+  <div aria-hidden="true" class="particle" style="width:2px;height:2px;background:#e8c870;top:30%;left:70%;animation:float2 5s ease-in-out infinite 2s;opacity:0.6;z-index:3;"></div>
+
+  <!-- ── Centered hero content ── -->
+  <div style="position:relative; z-index:10; width:100%; text-align:center; padding:120px 24px 100px;">
+
+    <!-- Star rating label -->
+    <div class="section-label fade-up" style="margin-bottom:20px; display:inline-block;">
+      ★ 4.5 / 5 Stars &nbsp;·&nbsp; Lagos's Premier Urban Oasis
+    </div>
+
+    <!-- Gold divider line -->
+    <div class="shimmer-line fade-up delay-1" style="max-width:160px; margin:0 auto 36px;"></div>
+
+    <!-- Main heading -->
+    <h1 class="fade-up delay-1" style="
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(36px,6.5vw,86px);
+      line-height:1.06;
+      font-weight:400;
+      color:#f0ece0;
+      letter-spacing:-0.01em;
+      max-width:860px;
+      margin:0 auto 24px;
+      text-shadow:0 4px 32px rgba(0,0,0,0.7);">
+      Welcome to<br/>
+      <em class="gold-text" style="font-style:italic; font-weight:600; line-height:1.06; vertical-align:baseline; font-size:inherit; text-transform:uppercase; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1,'kern' 1;">10Kobo Hotel</em><span style="color:#f0ece0; font-weight:600; line-height:1.06; vertical-align:baseline; font-size:inherit;"> and Suites</span>
+    </h1>
+
+    <!-- Subtext -->
+    <p class="fade-up delay-2" style="
+      font-size:clamp(15px,2vw,20px);
+      color:rgba(220,215,200,0.82);
+      line-height:1.75;
+      max-width:540px;
+      margin:0 auto 48px;
+      font-weight:300;
+      letter-spacing:0.01em;
+      text-shadow:0 2px 16px rgba(0,0,0,0.6);">
+      Experience luxury, comfort, and premium hospitality in Lagos.
+    </p>
+
+    <!-- Primary CTA button -->
+    <div class="fade-up delay-3" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px;">
+      <a href="#contact" class="btn-gold"
+         style="display:inline-flex; align-items:center; gap:10px; padding:18px 40px; font-size:14px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border-radius:6px; text-decoration:none; box-shadow:0 8px 40px rgba(201,168,76,0.45);">
+        <span>Book a Room Now</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#nightlife" class="btn-outline"
+         style="display:inline-flex; align-items:center; gap:10px; padding:17px 32px; font-size:14px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border-radius:6px; text-decoration:none;">
+        Explore Nightlife
+        <span class="neon-text" style="font-size:18px;">✦</span>
+      </a>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="fade-up delay-4" style="
+      display:inline-flex; align-items:center; gap:0;
+      margin-top:60px;
+      background:rgba(12,12,14,0.55);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(201,168,76,0.25);
+      border-radius:12px;
+      padding:18px 32px;
+      box-shadow:0 8px 40px rgba(0,0,0,0.4);">
+      <div style="text-align:center; padding:0 24px;">
+        <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:700; line-height:1;">4.5★</div>
+        <div style="font-size:10px; color:#6a6a7a; letter-spacing:0.14em; text-transform:uppercase; margin-top:4px;">Google Rating</div>
+      </div>
+      <div style="width:1px; height:40px; background:rgba(201,168,76,0.25);"></div>
+      <div style="text-align:center; padding:0 24px;">
+        <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:700; line-height:1;">24/7</div>
+        <div style="font-size:10px; color:#6a6a7a; letter-spacing:0.14em; text-transform:uppercase; margin-top:4px;">Eatery &amp; Service</div>
+      </div>
+      <div style="width:1px; height:40px; background:rgba(201,168,76,0.25);"></div>
+      <div style="text-align:center; padding:0 24px;">
+        <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:700; line-height:1;">VIP</div>
+        <div style="font-size:10px; color:#6a6a7a; letter-spacing:0.14em; text-transform:uppercase; margin-top:4px;">Club Experience</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom scroll hint -->
+  <div style="position:absolute; bottom:28px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; z-index:10;">
+    <div style="font-size:9px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(201,168,76,0.5);">Scroll</div>
+    <div style="width:1px; height:36px; background:linear-gradient(to bottom, #c9a84c88, transparent); animation:float1 2s ease-in-out infinite;"></div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT SECTION
+═══════════════════════════════════════════ -->
+<section id="about" class="py-28 relative section-reveal" style="background:#0c0c0e;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Image collage placeholder -->
+      <div class="relative">
+        <div style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:200px 200px; gap:12px;">
+          <div style="grid-column:1; grid-row:1/3; border:1px solid #2a2a32; border-radius:4px; overflow:hidden; position:relative;">
+            <div class="relative w-full h-full overflow-hidden rounded-lg">
+              <img src="luxury-room.jpg" alt="10Kobo Hotel Room 109" class="w-full h-full object-cover object-center"
+                style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform 0.6s ease;"
+                onmouseover="this.style.transform='scale(1.04)'"
+                onmouseout="this.style.transform='scale(1)'"
+                onerror="this.style.display='none'">
+            </div>
+          </div>
+          <div style="background:linear-gradient(135deg,#14141a,#101014); border:1px solid #2a2a32; border-radius:4px; display:flex;align-items:center;justify-content:center; overflow:hidden; position:relative;">
+            <!-- Premium bedroom photo — warm wood, pendant lights, leather armchair -->
+            <!-- File: 1779302459148.jpg — place in same folder as HTML -->
+            <img
+              src="1779302459148.jpg"
+              alt="10Kobo Hotel — Premium Bedroom"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+                position: absolute;
+                inset: 0;
+                transition: transform 0.6s ease;"
+              onmouseover="this.style.transform='scale(1.04)'"
+              onmouseout="this.style.transform='scale(1)'"
+              onerror="this.style.display='none'">
+          </div>
+          <div style="background:linear-gradient(135deg,#1a1510,#141414); border:1px solid #c9a84c22; border-radius:4px; display:flex;align-items:center;justify-content:center; overflow:hidden; position:relative;">
+            <div style="position:absolute;inset:0;background:linear-gradient(135deg,#c9a84c06,transparent); z-index:2; pointer-events:none;"></div>
+            <!-- Lounge / Dining Photo — file: 1779302558110.jpg -->
+            <img
+              src="1779302558110.jpg"
+              alt="10Kobo Hotel — Restaurant & Lounge"
+              style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; position:absolute; inset:0;"
+              onerror="this.style.display='none'">
+          </div>
+        </div>
+        <!-- Gold accent corner -->
+        <div style="position:absolute;top:-12px;left:-12px;width:40px;height:40px;border-top:2px solid #c9a84c;border-left:2px solid #c9a84c;"></div>
+        <div style="position:absolute;bottom:-12px;right:-12px;width:40px;height:40px;border-bottom:2px solid #c9a84c;border-right:2px solid #c9a84c;"></div>
+      </div>
+
+      <!-- Right: Copy -->
+      <div>
+        <div class="section-label mb-3">About 10Kobo</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(36px,4vw,54px); font-weight:400; line-height:1.1; color:#e8e4d8;">
+          Classic. Massive.<br/><em class="gold-text" style="font-style:italic;">Cozy.</em>
+        </h2>
+        <div class="divider" style="justify-content:flex-start; margin:20px 0;">
+          <div style="width:60px;height:1px;background:linear-gradient(90deg,#c9a84c,transparent);"></div>
+          <div style="color:#c9a84c;font-size:10px;">✦</div>
+        </div>
+        <p style="color:#8a8a9a; font-size:15px; line-height:1.9; margin-bottom:16px;">
+          Nestled in the heart of Egbe, Alimosho, <strong style="color:#c9a84c;">10Kobo Hotel & Suites</strong> is more than a place to stay — it is an experience carved from the pulse of Lagos. We have built an urban oasis where the boundary between luxury comfort and electric nightlife simply dissolves.
+        </p>
+        <p style="color:#8a8a9a; font-size:15px; line-height:1.9; margin-bottom:28px;">
+          Whether you are unwinding in one of our air-conditioned suites after a long journey, feasting at our 24/7 eatery on the finest Nigerian and continental cuisine, or dancing into the early hours at our legendary Club Night — every moment at 10Kobo is curated to leave you wanting more.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div style="padding:16px; background:#18181d; border:1px solid #2a2a32; border-radius:4px;">
+            <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600;">20+</div>
+            <div style="font-size:12px; color:#5a5a6a; margin-top:2px;">Premium Rooms & Suites</div>
+          </div>
+          <div style="padding:16px; background:#18181d; border:1px solid #2a2a32; border-radius:4px;">
+            <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600;">100%</div>
+            <div style="font-size:12px; color:#5a5a6a; margin-top:2px;">Security & Peace of Mind</div>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px; padding:16px; background:linear-gradient(135deg,#1a1510,#141414); border:1px solid #c9a84c33; border-radius:4px;">
+          <div style="width:40px;height:40px;background:linear-gradient(135deg,#c9a84c,#a07830);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0c0c0e" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div style="font-size:13px; color:#e8c870; font-weight:500;">20/21 Abanishe Street</div>
+            <div style="font-size:12px; color:#5a5a6a;">Egbe-Ikotun, Alimosho, Lagos, Nigeria</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ROOMS & ACCOMMODATIONS
+     4 Tiers | Exact Pricing | Image Frames
+═══════════════════════════════════════════ -->
+<section id="rooms" class="py-28 section-reveal" style="background:linear-gradient(180deg, #0c0c0e 0%, #0f0f14 50%, #0c0c0e 100%);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <div class="section-label mb-3">Accommodations</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(38px,4.5vw,58px); font-weight:400; color:#e8e4d8; line-height:1.1;">
+        Rooms &amp; <em class="gold-text" style="font-style:italic;">Suites</em>
+      </h2>
+      <p style="color:#5a5a6a; font-size:14px; max-width:520px; margin:12px auto 0; line-height:1.8;">
+        Four carefully composed retreats — each air-conditioned, fully connected, and designed to restore you completely. All rooms include free cancellation.
+      </p>
+    </div>
+
+    <!--
+    ═══════════════════════════════════════════
+    ROOM CARDS GRID
+    Layout: 1 col (mobile) → 2 col (md) → 4 col (lg)
+    ═══════════════════════════════════════════
+    -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+
+
+      <!-- ══════════════════════════════════
+           SLOT 1 — CLASSIC ROOM
+           Price: ₦45,000 / night
+      ══════════════════════════════════ -->
+      <div class="gold-card rounded-xl overflow-hidden flex flex-col" style="background:#13131a;">
+
+        <!-- ── IMAGE FRAME ──────────────────────
+             Replace src with your room photo.
+             Price: ₦45,000 / night
+        ────────────────────────────────────── -->
+        <div class="room-img-wrap" style="position:relative; height:224px;">
+          <img
+            src="hotel_10_kobo_and_suites_a504bc_5_900x550.jpg"
+            alt="Classic Room — 10Kobo Hotel &amp; Suites" data-fade
+            class="rounded-lg"
+            style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; display:block;"
+            onerror="this.style.display='none'">
+          <!-- Placeholder shown when image is not yet loaded -->
+          <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(145deg,#1a1a26 0%,#131320 60%,#1e1a2a 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2a2a3a" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span style="font-size:10px; color:#2a2a3a; letter-spacing:0.15em; text-transform:uppercase;">Classic Room Photo</span>
+          </div>
+          <!-- Tier badge -->
+          <div style="position:absolute; top:14px; left:14px; z-index:3; background:#0c0c0e99; backdrop-filter:blur(8px); border:1px solid #c9a84c44; color:#c9a84c; font-size:9px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; padding:4px 10px; border-radius:20px;">Classic</div>
+        </div>
+
+        <!-- ── Card Body ── -->
+        <div style="padding:22px 22px 24px; display:flex; flex-direction:column; flex:1;">
+
+          <!-- Room name & price -->
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#e8e4d8; margin-bottom:4px; line-height:1.2;">Classic Room</h3>
+          <div style="display:flex; align-items:baseline; gap:6px; margin-bottom:14px;">
+            <span style="color:#c9a84c; font-size:24px; font-family:'Cormorant Garamond',serif; font-weight:700; line-height:1;">₦45,000</span>
+            <span style="font-size:12px; color:#4a4a5a; font-family:'DM Sans',sans-serif;">/ night</span>
+          </div>
+
+          <div class="shimmer-line mb-4"></div>
+
+          <!-- Features list -->
+          <ul style="display:flex; flex-direction:column; gap:9px; margin-bottom:16px; flex:1;">
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Free High-Speed Wi-Fi
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Air Conditioning
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Plush Bedding &amp; Pillows
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Flat-Screen Smart TV
+            </li>
+            <!-- Free Cancellation — green -->
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; font-weight:600; color:#4ade80; margin-top:4px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+              Free cancellation
+            </li>
+          </ul>
+
+          <!-- CTA -->
+          <a href="#contact" class="btn-gold w-full py-3 text-sm text-center block rounded-lg tracking-wider" style="margin-top:auto;">
+            <span>Select Room</span>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ══════════════════════════════════
+           SLOT 2 — DELUXE ROOM  ★ Popular
+           Price: ₦55,000 / night
+      ══════════════════════════════════ -->
+      <div class="gold-card rounded-xl overflow-hidden flex flex-col" style="background:#15131e; border-color:#c9a84c77; box-shadow:0 24px 60px #c9a84c1e;">
+
+        <!-- ── IMAGE FRAME ──────────────────────
+             Replace src with your room photo.
+             Price: ₦55,000 / night
+        ────────────────────────────────────── -->
+        <div class="room-img-wrap" style="position:relative; height:224px;">
+          <img
+            src="hotel_10_kobo_and_suites_db1ea8_4_900x550.jpg"
+            alt="Deluxe Room — 10Kobo Hotel &amp; Suites" data-fade
+            class="rounded-lg"
+            style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; display:block;"
+            onerror="this.style.display='none'">
+          <!-- Placeholder -->
+          <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(145deg,#201a2e 0%,#17132a 60%,#241a30 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3a2a4a" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span style="font-size:10px; color:#3a2a4a; letter-spacing:0.15em; text-transform:uppercase;">Deluxe Room Photo</span>
+          </div>
+          <!-- Most Popular badge -->
+          <div class="badge-gold" style="position:absolute; top:14px; left:14px; z-index:3; border-radius:20px; padding:4px 12px; font-size:9px; letter-spacing:0.14em;">★ Most Popular</div>
+        </div>
+
+        <!-- ── Card Body ── -->
+        <div style="padding:22px 22px 24px; display:flex; flex-direction:column; flex:1;">
+
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#e8e4d8; margin-bottom:4px; line-height:1.2;">Deluxe Room</h3>
+          <div style="display:flex; align-items:baseline; gap:6px; margin-bottom:14px;">
+            <span style="color:#c9a84c; font-size:24px; font-family:'Cormorant Garamond',serif; font-weight:700; line-height:1;">₦55,000</span>
+            <span style="font-size:12px; color:#4a4a5a; font-family:'DM Sans',sans-serif;">/ night</span>
+          </div>
+
+          <div class="shimmer-line mb-4"></div>
+
+          <ul style="display:flex; flex-direction:column; gap:9px; margin-bottom:16px; flex:1;">
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> All Classic Room Features
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Extra Space &amp; Seating Area
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Upgraded Entertainment
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Premium Amenities Kit
+            </li>
+            <!-- Free Cancellation — green -->
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; font-weight:600; color:#4ade80; margin-top:4px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+              Free cancellation
+            </li>
+          </ul>
+
+          <!-- CTA — gold (featured) -->
+          <a href="#contact" class="btn-gold w-full py-3 text-sm text-center block rounded-lg tracking-wider" style="margin-top:auto;">
+            <span>Select Room</span>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ══════════════════════════════════
+           SLOT 3 — EXECUTIVE ROOM
+           Price: ₦65,000 / night
+      ══════════════════════════════════ -->
+      <div class="gold-card rounded-xl overflow-hidden flex flex-col" style="background:#13131a;">
+
+        <!-- ── IMAGE FRAME ──────────────────────
+             Replace src with your room photo.
+             Price: ₦65,000 / night
+        ────────────────────────────────────── -->
+        <div class="room-img-wrap" style="position:relative; height:224px;">
+          <img
+            src="hotel_10_kobo_and_suites_a977f8_3_900x550.jpg"
+            alt="Executive Room — 10Kobo Hotel &amp; Suites" data-fade
+            class="rounded-lg"
+            style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; display:block;"
+            onerror="this.style.display='none'">
+          <!-- Placeholder -->
+          <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(145deg,#1e1a10 0%,#181408 60%,#241e10 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3a3020" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span style="font-size:10px; color:#3a3020; letter-spacing:0.15em; text-transform:uppercase;">Executive Room Photo</span>
+          </div>
+          <!-- Tier badge -->
+          <div style="position:absolute; top:14px; left:14px; z-index:3; background:linear-gradient(135deg,#c9a84c,#a07830); color:#0c0c0e; font-size:9px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; padding:4px 10px; border-radius:20px;">Executive</div>
+        </div>
+
+        <!-- ── Card Body ── -->
+        <div style="padding:22px 22px 24px; display:flex; flex-direction:column; flex:1;">
+
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#e8e4d8; margin-bottom:4px; line-height:1.2;">Executive Room</h3>
+          <div style="display:flex; align-items:baseline; gap:6px; margin-bottom:14px;">
+            <span style="color:#c9a84c; font-size:24px; font-family:'Cormorant Garamond',serif; font-weight:700; line-height:1;">₦65,000</span>
+            <span style="font-size:12px; color:#4a4a5a; font-family:'DM Sans',sans-serif;">/ night</span>
+          </div>
+
+          <div class="shimmer-line mb-4"></div>
+
+          <ul style="display:flex; flex-direction:column; gap:9px; margin-bottom:16px; flex:1;">
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Max Luxury Comfort
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Exclusive Lounge Access
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Dedicated Concierge
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> VIP Club Night Priority
+            </li>
+            <!-- Free Cancellation — green -->
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; font-weight:600; color:#4ade80; margin-top:4px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+              Free cancellation
+            </li>
+          </ul>
+
+          <!-- CTA -->
+          <a href="#contact" class="btn-gold w-full py-3 text-sm text-center block rounded-lg tracking-wider" style="margin-top:auto;">
+            <span>Select Room</span>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ══════════════════════════════════
+           SLOT 4 — PREMIUM SUITE  🆕 NEW
+           Price: ₦105,000 / night
+      ══════════════════════════════════ -->
+      <div class="gold-card rounded-xl overflow-hidden flex flex-col" style="background:#100e16; border-color:#c9a84c55; position:relative;">
+        <!-- Exclusive corner ribbon -->
+        <div style="position:absolute; top:0; right:0; z-index:10; overflow:hidden; width:90px; height:90px; pointer-events:none;">
+          <div style="position:absolute; top:18px; right:-22px; width:100px; text-align:center; background:linear-gradient(135deg,#c9a84c,#a07830); color:#0c0c0e; font-size:8px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; padding:5px 0; transform:rotate(45deg);">NEW</div>
+        </div>
+
+        <!-- ── IMAGE FRAME ──────────────────────
+             Replace src with your room photo.
+             Price: ₦105,000 / night
+        ────────────────────────────────────── -->
+        <div class="room-img-wrap" style="position:relative; height:224px;">
+          <img
+            src="hotel_10_kobo_and_suites_8f63cc_2_900x550.jpg"
+            alt="Premium Suite — 10Kobo Hotel &amp; Suites" data-fade
+            class="rounded-lg"
+            style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; display:block;"
+            onerror="this.style.display='none'">
+          <!-- Placeholder — deeper, richer purple-gold tone for premium tier -->
+          <div style="position:absolute; inset:0; z-index:1; background:linear-gradient(145deg,#1a1020 0%,#140c1e 60%,#201530 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+            <div style="width:52px; height:52px; background:linear-gradient(135deg,#c9a84c22,#c9a84c0a); border:1px solid #c9a84c33; border-radius:12px; display:flex; align-items:center; justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c66" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <span style="font-size:10px; color:#4a3a5a; letter-spacing:0.15em; text-transform:uppercase;">Premium Suite Photo</span>
+          </div>
+          <!-- Tier badge -->
+          <div style="position:absolute; top:14px; left:14px; z-index:3; background:linear-gradient(135deg,#c9a84ccc,#a07830cc); backdrop-filter:blur(6px); color:#0c0c0e; font-size:9px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; padding:5px 12px; border-radius:20px; box-shadow:0 2px 12px #c9a84c44;">⭐ Premium Suite</div>
+        </div>
+
+        <!-- ── Card Body ── -->
+        <div style="padding:22px 22px 24px; display:flex; flex-direction:column; flex:1;">
+
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#e8e4d8; margin-bottom:4px; line-height:1.2;">Premium Suite</h3>
+          <div style="display:flex; align-items:baseline; gap:6px; margin-bottom:14px;">
+            <span style="color:#e8c870; font-size:24px; font-family:'Cormorant Garamond',serif; font-weight:700; line-height:1;">₦105,000</span>
+            <span style="font-size:12px; color:#4a4a5a; font-family:'DM Sans',sans-serif;">/ night</span>
+          </div>
+
+          <!-- Gold shimmer line with extra glow for premium -->
+          <div class="shimmer-line mb-4" style="box-shadow:0 0 8px #c9a84c44;"></div>
+
+          <ul style="display:flex; flex-direction:column; gap:9px; margin-bottom:16px; flex:1;">
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> All Executive Features
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Private Living &amp; Dining Area
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Butler Service on Request
+            </li>
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; color:#7a7a8a;">
+              <span style="color:#c9a84c; font-size:11px; flex-shrink:0;">✦</span> Rooftop &amp; Full VIP Access
+            </li>
+            <!-- Free Cancellation — green -->
+            <li style="display:flex; align-items:center; gap:9px; font-size:13px; font-weight:600; color:#4ade80; margin-top:4px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+              Free cancellation
+            </li>
+          </ul>
+
+          <!-- CTA — bright gold for premium -->
+          <a href="#contact" class="btn-gold w-full py-3 text-sm text-center block rounded-lg tracking-wider" style="margin-top:auto; box-shadow:0 4px 20px #c9a84c33;">
+            <span>Select Room</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!--  END ROOM CARDS GRID  -->
+
+    <!-- Price verification summary (dev reference — remove before launch if desired) -->
+    <!--
+      PRICE DOUBLE-CHECK:
+      Slot 1 → Classic Room   → ₦45,000 / night  ✓
+      Slot 2 → Deluxe Room    → ₦55,000 / night  ✓
+      Slot 3 → Executive Room → ₦65,000 / night  ✓
+      Slot 4 → Premium Suite  → ₦105,000 / night ✓
+    -->
+
+    <!-- Check-in policy strip -->
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div style="text-align:center; padding:18px 16px; background:#18181d; border:1px solid #2a2a32; border-radius:10px;">
+        <div class="gold-text" style="font-size:20px; font-family:'Cormorant Garamond',serif; font-weight:600;">3:00 PM</div>
+        <div style="font-size:11px; color:#5a5a6a; margin-top:3px; letter-spacing:0.1em; text-transform:uppercase;">Check-In</div>
+      </div>
+      <div style="text-align:center; padding:18px 16px; background:#18181d; border:1px solid #2a2a32; border-radius:10px;">
+        <div class="gold-text" style="font-size:20px; font-family:'Cormorant Garamond',serif; font-weight:600;">11:00 AM</div>
+        <div style="font-size:11px; color:#5a5a6a; margin-top:3px; letter-spacing:0.1em; text-transform:uppercase;">Check-Out</div>
+      </div>
+      <div style="text-align:center; padding:18px 16px; background:#18181d; border:1px solid #2a2a32; border-radius:10px;">
+        <div class="gold-text" style="font-size:20px; font-family:'Cormorant Garamond',serif; font-weight:600;">24/7</div>
+        <div style="font-size:11px; color:#5a5a6a; margin-top:3px; letter-spacing:0.1em; text-transform:uppercase;">Front Desk</div>
+      </div>
+      <div style="text-align:center; padding:18px 16px; background:#18181d; border:1px solid #2a2a32; border-radius:10px;">
+        <div class="gold-text" style="font-size:20px; font-family:'Cormorant Garamond',serif; font-weight:600;">Free</div>
+        <div style="font-size:11px; color:#5a5a6a; margin-top:3px; letter-spacing:0.1em; text-transform:uppercase;">Parking</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     AMENITIES
+═══════════════════════════════════════════ -->
+<section id="amenities" class="py-28 section-reveal" style="background:#0f0f14;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <div class="section-label mb-3">What We Offer</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(38px,4.5vw,58px); font-weight:400; color:#e8e4d8; line-height:1.1;">
+        Every <em class="gold-text" style="font-style:italic;">Comfort</em>, Covered
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 stagger-children">
+      <!-- Each amenity -->
+      <div class="amenity-box rounded-sm p-7 text-center">
+        <div style="width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#c9a84c22,#c9a84c11);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600; color:#e8e4d8; margin-bottom:6px;">Premium Rooms</h4>
+        <p style="font-size:12.5px; color:#5a5a6a; line-height:1.7;">AC, flat-screen TV & plush bedding in every room</p>
+      </div>
+
+      <div class="amenity-box rounded-sm p-7 text-center">
+        <div style="width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#c9a84c22,#c9a84c11);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600; color:#e8e4d8; margin-bottom:6px;">24/7 Eatery</h4>
+        <p style="font-size:12.5px; color:#5a5a6a; line-height:1.7;">Nigerian & continental dishes served around the clock</p>
+      </div>
+
+      <div class="amenity-box rounded-sm p-7 text-center">
+        <div style="width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#c9a84c22,#c9a84c11);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M1.05 1h22l-2 9H3.05l-2-9z"/><path d="M2 10c-.67 3.33 1.33 6 6 6s6.67-2.67 8-8"/><circle cx="7" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600; color:#e8e4d8; margin-bottom:6px;">Free Wi-Fi</h4>
+        <p style="font-size:12.5px; color:#5a5a6a; line-height:1.7;">High-speed internet throughout the entire property</p>
+      </div>
+
+      <div class="amenity-box rounded-sm p-7 text-center">
+        <div style="width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#c9a84c22,#c9a84c11);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600; color:#e8e4d8; margin-bottom:6px;">24/7 Security</h4>
+        <p style="font-size:12.5px; color:#5a5a6a; line-height:1.7;">Top-tier guards and CCTV for your complete peace of mind</p>
+      </div>
+
+      <div class="amenity-box rounded-sm p-7 text-center">
+        <div style="width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#c9a84c22,#c9a84c11);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600; color:#e8e4d8; margin-bottom:6px;">Club Lounge</h4>
+        <p style="font-size:12.5px; color:#5a5a6a; line-height:1.7;">State-of-the-art sound, Afrobeats, Amapiano & VIP areas</p>
+      </div>
+
+      <div class="amenity-box rounded-sm p-7 text-center">
+        <div style="width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#c9a84c22,#c9a84c11);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600; color:#e8e4d8; margin-bottom:6px;">Event Spaces</h4>
+        <p style="font-size:12.5px; color:#5a5a6a; line-height:1.7;">Conferences, weddings & celebrations done beautifully</p>
+      </div>
+
+      <div class="amenity-box rounded-sm p-7 text-center">
+        <div style="width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#c9a84c22,#c9a84c11);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600; color:#e8e4d8; margin-bottom:6px;">Cocktail Bar</h4>
+        <p style="font-size:12.5px; color:#5a5a6a; line-height:1.7;">Signature cocktails crafted by expert mixologists</p>
+      </div>
+
+      <div class="amenity-box rounded-sm p-7 text-center">
+        <div style="width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#c9a84c22,#c9a84c11);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600; color:#e8e4d8; margin-bottom:6px;">Pro Staff</h4>
+        <p style="font-size:12.5px; color:#5a5a6a; line-height:1.7;">Trained, courteous team dedicated to your experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     NIGHTLIFE / EVENT SPOTLIGHT
+═══════════════════════════════════════════ -->
+<section id="nightlife" class="py-28 section-reveal" style="position:relative; overflow:hidden; background:#07070d;">
+  <!-- Neon background glow -->
+  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:600px; height:600px; background:radial-gradient(ellipse, #e8ff4709 0%, transparent 70%); border-radius:50%;"></div>
+  <div style="position:absolute; top:20%; left:10%; width:200px; height:200px; background:radial-gradient(ellipse, #c9a84c08 0%, transparent 70%); border-radius:50%;"></div>
+
+  <!-- Big background text -->
+  <div style="position:absolute; left:0; right:0; bottom:-5%; font-family:'Bebas Neue',cursive; font-size:clamp(80px,14vw,200px); color:#e8ff4703; text-align:center; line-height:1; user-select:none; pointer-events:none; letter-spacing:0.05em;">CLUB NIGHT</div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div style="font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#e8ff47; font-weight:500; margin-bottom:12px;">
+          ● LIVE NOW — Every Friday & Saturday
+        </div>
+        <h2 style="font-family:'Bebas Neue',cursive; font-size:clamp(52px,7vw,96px); line-height:0.95; letter-spacing:0.02em; color:#e8e4d8; margin-bottom:20px;">
+          Club Night<br/>
+          <span class="neon-text">at 10Kobo</span>
+        </h2>
+        <p style="color:#8a8a9a; font-size:15px; line-height:1.9; margin-bottom:28px; max-width:440px;">
+          Alimosho's most talked-about night out. The bass drops, the crowd ignites, and Afrobeats and Amapiano fill every corner of our purpose-built club space. This isn't just a party — it's a culture.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 mb-10">
+          <div class="neon-card rounded-sm p-5" style="background:#0e0e16;">
+            <div class="neon-text" style="font-family:'Bebas Neue',cursive; font-size:32px; line-height:1;">VIP Tables</div>
+            <div style="font-size:12px; color:#8a8a9a; margin-top:4px; line-height:1.6;">Reserve your section with full table service and premium privacy</div>
+          </div>
+          <div class="neon-card rounded-sm p-5" style="background:#0e0e16;">
+            <div class="neon-text" style="font-family:'Bebas Neue',cursive; font-size:32px; line-height:1;">Bottle Service</div>
+            <div style="font-size:12px; color:#8a8a9a; margin-top:4px; line-height:1.6;">Premium bottles delivered to your table by our club hosts</div>
+          </div>
+          <div class="neon-card rounded-sm p-5" style="background:#0e0e16;">
+            <div class="neon-text" style="font-family:'Bebas Neue',cursive; font-size:32px; line-height:1;">Dance Floor</div>
+            <div style="font-size:12px; color:#8a8a9a; margin-top:4px; line-height:1.6;">Spacious floor with professional lighting and sound design</div>
+          </div>
+          <div class="neon-card rounded-sm p-5" style="background:#0e0e16;">
+            <div class="neon-text" style="font-family:'Bebas Neue',cursive; font-size:32px; line-height:1;">Live DJs</div>
+            <div style="font-size:12px; color:#8a8a9a; margin-top:4px; line-height:1.6;">Top DJs spinning the hottest Afrobeats & Amapiano sets all night</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="tel:+2349166957914" class="btn-neon px-8 py-4 text-sm tracking-wider rounded-sm">
+            Reserve VIP Table
+          </a>
+          <a href="#contact" class="btn-outline px-8 py-4 text-sm tracking-wider rounded-sm" style="border-color:#e8ff4744; color:#e8ff47;">
+            Private Events
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Nightlife visual — visible on ALL screen sizes -->
+      <div class="relative mt-10 lg:mt-0">
+        <div style="aspect-ratio:3/4; max-width:440px; margin:0 auto; position:relative;">
+          <div style="width:100%; height:100%; border:1px solid #e8ff4720; border-radius:4px; overflow:hidden; position:relative;">
+            <!-- Real club night photo -->
+            <img src="club-night.jpg" alt="Club Night at 10Kobo Hotel — DJ performing live" style="width:100%;height:100%;object-fit:cover;object-position:center 75%;display:block;"/>
+            <!-- Neon overlay layers for atmosphere -->
+            <div style="position:absolute; bottom:0; left:0; right:0; height:40%; background:linear-gradient(0deg, rgba(7,7,13,0.55), transparent); pointer-events:none;"></div>
+            <div style="position:absolute; top:0; left:0; right:0; height:30%; background:linear-gradient(180deg, rgba(7,7,13,0.35), transparent); pointer-events:none;"></div>
+          </div>
+          <!-- Neon corner accents -->
+          <div style="position:absolute;top:-8px;left:-8px;width:32px;height:32px;border-top:2px solid #e8ff47;border-left:2px solid #e8ff47; filter:drop-shadow(0 0 6px #e8ff47);"></div>
+          <div style="position:absolute;bottom:-8px;right:-8px;width:32px;height:32px;border-bottom:2px solid #e8ff47;border-right:2px solid #e8ff47; filter:drop-shadow(0 0 6px #e8ff47);"></div>
+
+          <!-- Friday Turn Up tag — pinned to bottom-right of card -->
+          <div style="position:absolute; bottom:-16px; right:-16px;
+                      background:#0c0c12; border:1px solid #e8ff4744;
+                      padding:14px 18px; border-radius:4px;
+                      box-shadow:0 12px 40px #00000077; z-index:2;">
+            <div style="font-size:10px; letter-spacing:0.15em; color:#e8ff47; text-transform:uppercase; margin-bottom:4px;">Every Weekend</div>
+            <div style="font-family:'Bebas Neue',cursive; font-size:22px; color:#e8e4d8; letter-spacing:0.05em;">FRIDAY TURN UP</div>
+            <div style="font-size:11px; color:#5a5a6a; margin-top:2px;">10PM — Till Dawn</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     EVENTS SECTION
+═══════════════════════════════════════════ -->
+<section class="py-20 section-reveal" style="background:#0f0f14;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-12">
+      <div class="section-label mb-3">Private Events</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(34px,4vw,52px); font-weight:400; color:#e8e4d8;">
+        Your Celebration, <em class="gold-text" style="font-style:italic;">Our Stage</em>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="gold-card rounded-sm overflow-hidden" style="background:#14141a; padding:32px; text-align:center;">
+        <div style="font-size:36px; margin-bottom:16px; opacity:0.7;">🎓</div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#e8e4d8; margin-bottom:8px;">Conferences</h4>
+        <p style="font-size:13px; color:#5a5a6a; line-height:1.8;">Corporate meetings, seminars, and professional gatherings with full AV support.</p>
+      </div>
+      <div class="gold-card rounded-sm overflow-hidden" style="background:#14141a; padding:32px; text-align:center; border-color:#c9a84c44;">
+        <div style="font-size:36px; margin-bottom:16px; opacity:0.7;">💍</div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#e8e4d8; margin-bottom:8px;">Weddings</h4>
+        <p style="font-size:13px; color:#5a5a6a; line-height:1.8;">Elegant reception spaces dressed to reflect your love story and personal style.</p>
+      </div>
+      <div class="gold-card rounded-sm overflow-hidden" style="background:#14141a; padding:32px; text-align:center;">
+        <div style="font-size:36px; margin-bottom:16px; opacity:0.7;">🎉</div>
+        <h4 style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#e8e4d8; margin-bottom:8px;">Celebrations</h4>
+        <p style="font-size:13px; color:#5a5a6a; line-height:1.8;">Birthdays, anniversaries, and milestone moments made extraordinary.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     GALLERY SECTION
+═══════════════════════════════════════════ -->
+<section id="gallery" class="py-28 section-reveal" style="background:#0c0c0e; position:relative; overflow:hidden;">
+
+  <!-- Top shimmer rule -->
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;" class="shimmer-line"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <!-- Section Header -->
+    <div class="text-center mb-14">
+      <div class="section-label mb-3">Our Space</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(38px,4.5vw,58px); font-weight:400; color:#e8e4d8; line-height:1.1;">
+        Gallery of <em class="gold-text" style="font-style:italic;">Moments</em>
+      </h2>
+      <p style="color:#5a5a6a; font-size:14px; max-width:400px; margin:12px auto 0; line-height:1.8;">
+        Swipe through our spaces — click any image for a full-screen experience.
+      </p>
+    </div>
+
+    <!-- ── Carousel ── -->
+    <div class="glry-viewport" id="glryViewport">
+      <div class="glry-track" id="glryTrack">
+
+        <!-- Slide 1 -->
+        <div class="glry-slide">
+          <div class="glry-slide-inner" onclick="lbOpen(0)">
+            <img src="file_0000000006d871f4803ca35ee118cb03.png" alt="10Kobo Hotel & Suites — interior view" loading="lazy" decoding="async">
+            <div class="glry-expand-icon"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span></div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="glry-slide">
+          <div class="glry-slide-inner" onclick="lbOpen(1)">
+            <img src="file_000000009a5871f4930a7ef3bfcae8d5.png" alt="10Kobo Hotel & Suites — lounge ambience" loading="lazy" decoding="async">
+            <div class="glry-expand-icon"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span></div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="glry-slide">
+          <div class="glry-slide-inner" onclick="lbOpen(2)">
+            <img src="file_00000000a97871f4a94c3db31f6bf415.png" alt="10Kobo Hotel & Suites — signature suite" loading="lazy" decoding="async">
+            <div class="glry-expand-icon"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span></div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="glry-slide">
+          <div class="glry-slide-inner" onclick="lbOpen(3)">
+            <img src="unnamed (4).webp" alt="10Kobo Hotel & Suites — guest experience" loading="lazy" decoding="async">
+            <div class="glry-expand-icon"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span></div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="glry-slide">
+          <div class="glry-slide-inner" onclick="lbOpen(4)">
+            <img src="unnamed (5).webp" alt="10Kobo Hotel & Suites — fine dining" loading="lazy" decoding="async">
+            <div class="glry-expand-icon"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span></div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="glry-slide">
+          <div class="glry-slide-inner" onclick="lbOpen(5)">
+            <img src="unnamed (3).webp" alt="10Kobo Hotel & Suites — evening atmosphere" loading="lazy" decoding="async">
+            <div class="glry-expand-icon"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span></div>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="glry-slide">
+          <div class="glry-slide-inner" onclick="lbOpen(6)">
+            <img src="hotel_10_kobo_and_suites_50d6ce_7_900x550.jpg" alt="10Kobo Hotel & Suites — exterior facade" loading="lazy" decoding="async">
+            <div class="glry-expand-icon"><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span></div>
+          </div>
+        </div>
+
+      </div><!-- /track -->
+    </div><!-- /viewport -->
+
+    <!-- Dot pagination -->
+    <div class="glry-dots" id="glryDots" role="tablist" aria-label="Gallery navigation">
+      <button class="glry-dot active" onclick="glryGoTo(0)" aria-label="Photo 1"></button>
+      <button class="glry-dot" onclick="glryGoTo(1)" aria-label="Photo 2"></button>
+      <button class="glry-dot" onclick="glryGoTo(2)" aria-label="Photo 3"></button>
+      <button class="glry-dot" onclick="glryGoTo(3)" aria-label="Photo 4"></button>
+      <button class="glry-dot" onclick="glryGoTo(4)" aria-label="Photo 5"></button>
+      <button class="glry-dot" onclick="glryGoTo(5)" aria-label="Photo 6"></button>
+      <button class="glry-dot" onclick="glryGoTo(6)" aria-label="Photo 7"></button>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- Bottom shimmer rule -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;" class="shimmer-line"></div>
+</section>
+
+<!-- ── LIGHTBOX OVERLAY ───────────────────────────────────── -->
+<div id="glry-lightbox" role="dialog" aria-modal="true" aria-label="Gallery lightbox">
+  <div class="lb-backdrop" onclick="lbClose()"></div>
+  <div class="lb-content">
+    <button class="lb-close" onclick="lbClose()" aria-label="Close lightbox">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="lb-img-wrap" id="lbImgWrap">
+      <img id="lbImg" src="" alt="">
+    </div>
+    <div class="lb-controls">
+      <button class="lb-btn" onclick="lbPrev()" aria-label="Previous photo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lb-dots" id="lbDots">
+        <button class="lb-dot active" onclick="lbGoTo(0)" aria-label="Photo 1"></button>
+        <button class="lb-dot" onclick="lbGoTo(1)" aria-label="Photo 2"></button>
+        <button class="lb-dot" onclick="lbGoTo(2)" aria-label="Photo 3"></button>
+        <button class="lb-dot" onclick="lbGoTo(3)" aria-label="Photo 4"></button>
+        <button class="lb-dot" onclick="lbGoTo(4)" aria-label="Photo 5"></button>
+        <button class="lb-dot" onclick="lbGoTo(5)" aria-label="Photo 6"></button>
+        <button class="lb-dot" onclick="lbGoTo(6)" aria-label="Photo 7"></button>
+      </div>
+      <button class="lb-btn" onclick="lbNext()" aria-label="Next photo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const TOTAL    = 7;
+  const track    = document.getElementById('glryTrack');
+  const dots     = document.querySelectorAll('#glryDots .glry-dot');
+  const viewport = document.getElementById('glryViewport');
+  let current    = 0;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let isDragging  = false;
+
+  function glrySync(idx) {
+    current = ((idx % TOTAL) + TOTAL) % TOTAL;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    document.querySelectorAll('#lbDots .lb-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  window.glryGoTo = function(idx) { glrySync(idx); };
+
+  viewport.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    isDragging = true;
+  }, { passive: true });
+
+  viewport.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
+    const dx = e.touches[0].clientX - touchStartX;
+    const dy = e.touches[0].clientY - touchStartY;
+    // If horizontal swipe dominates, prevent vertical page scroll
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  viewport.addEventListener('touchend', function(e) {
+    if (!isDragging) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      glrySync(dx < 0 ? current + 1 : current - 1);
+    }
+    isDragging = false;
+  }, { passive: true });
+
+  let mouseStartX = 0;
+  let mouseDown   = false;
+  viewport.addEventListener('mousedown', function(e) { mouseStartX = e.clientX; mouseDown = true; e.preventDefault(); });
+  viewport.addEventListener('mouseup',   function(e) { if (!mouseDown) return; const dx = e.clientX - mouseStartX; if (Math.abs(dx) > 40) glrySync(dx < 0 ? current + 1 : current - 1); mouseDown = false; });
+  viewport.addEventListener('mouseleave', function()  { mouseDown = false; });
+
+  const lb      = document.getElementById('glry-lightbox');
+  const lbImgEl = document.getElementById('lbImg');
+  let lbCurrent = 0;
+  let lbTouchX  = 0;
+
+  const lbSrcs = [
+    'file_0000000006d871f4803ca35ee118cb03.png',
+    'file_000000009a5871f4930a7ef3bfcae8d5.png',
+    'file_00000000a97871f4a94c3db31f6bf415.png',
+    'unnamed (4).webp',
+    'unnamed (5).webp',
+    'unnamed (3).webp',
+    'hotel_10_kobo_and_suites_50d6ce_7_900x550.jpg',
+  ];
+
+  function lbSetImg(idx) {
+    lbImgEl.classList.remove('lb-img-in');
+    lbImgEl.src = lbSrcs[idx];
+    lbImgEl.onload  = function() { lbImgEl.classList.add('lb-img-in'); };
+    lbImgEl.onerror = function() { lbImgEl.classList.add('lb-img-in'); };
+    lbCurrent = idx;
+    document.querySelectorAll('#lbDots .lb-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  window.lbOpen = function(idx) { lbSetImg(idx); glrySync(idx); lb.classList.add('lb-open'); document.body.style.overflow = 'hidden'; };
+  window.lbClose = function()   { lb.classList.remove('lb-open'); document.body.style.overflow = ''; };
+  window.lbPrev  = function()   { lbSetImg(((lbCurrent - 1) + TOTAL) % TOTAL); glrySync(lbCurrent); };
+  window.lbNext  = function()   { lbSetImg((lbCurrent + 1) % TOTAL); glrySync(lbCurrent); };
+  window.lbGoTo  = function(idx){ lbSetImg(idx); glrySync(idx); };
+
+  document.addEventListener('keydown', function(e) {
+    if (!lb.classList.contains('lb-open')) return;
+    if (e.key === 'Escape')     lbClose();
+    if (e.key === 'ArrowLeft')  lbPrev();
+    if (e.key === 'ArrowRight') lbNext();
+  });
+
+  lb.addEventListener('touchstart', function(e) { lbTouchX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend',   function(e) { const dx = e.changedTouches[0].clientX - lbTouchX; if (Math.abs(dx) > 40) { dx < 0 ? lbNext() : lbPrev(); } }, { passive: true });
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════ -->
+<section id="testimonials" class="py-28 section-reveal" style="background:#0c0c0e;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <div class="section-label mb-3">Guest Reviews</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(38px,4.5vw,58px); font-weight:400; color:#e8e4d8; line-height:1.1;">
+        What Our Guests <em class="gold-text" style="font-style:italic;">Say</em>
+      </h2>
+      <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px;">
+        <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <span style="color:#8a8a9a; font-size:14px;">4.5/5 on Google — Consistently Exceptional</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 stagger-children">
+
+      <div class="testimonial-card rounded-sm p-7" style="position:relative;">
+        <div class="quote-mark">"</div>
+        <div class="stars mb-4"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p style="color:#8a8a9a; font-size:14px; line-height:1.9; font-style:italic; margin-bottom:20px; position:relative; z-index:1;">
+          "I genuinely enjoyed my stay at 10Kobo. The room was clean, the AC was perfect, and the staff were so welcoming. The club night on Friday? Absolutely incredible. Lagos does not have another spot like this in Alimosho."
+        </p>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#c9a84c,#a07830);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#0c0c0e;flex-shrink:0;">A</div>
+          <div>
+            <div style="font-size:14px; font-weight:500; color:#e8e4d8;">Adebayo O.</div>
+            <div style="font-size:11px; color:#5a5a6a; display:flex; align-items:center; gap:5px;"><span style="color:#c9a84c;">★</span> Google Review — Verified Stay</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card rounded-sm p-7" style="position:relative; border-color:#c9a84c33; background:linear-gradient(160deg,#16141a,#14141a);">
+        <div class="quote-mark">"</div>
+        <div class="stars mb-4"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p style="color:#8a8a9a; font-size:14px; line-height:1.9; font-style:italic; margin-bottom:20px; position:relative; z-index:1;">
+          "The 4.5-star environment here is absolutely real. I came for a conference, stayed two extra nights just because of the atmosphere. The eatery runs all night and the food is superb. 10Kobo has become my Lagos base."
+        </p>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#c9a84c,#a07830);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#0c0c0e;flex-shrink:0;">C</div>
+          <div>
+            <div style="font-size:14px; font-weight:500; color:#e8e4d8;">Chisom N.</div>
+            <div style="font-size:11px; color:#5a5a6a; display:flex; align-items:center; gap:5px;"><span style="color:#c9a84c;">★</span> Google Review — Verified Stay</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card rounded-sm p-7" style="position:relative;">
+        <div class="quote-mark">"</div>
+        <div class="stars mb-4"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div>
+        <p style="color:#8a8a9a; font-size:14px; line-height:1.9; font-style:italic; margin-bottom:20px; position:relative; z-index:1;">
+          "We held our company retreat here and everything was seamless. Security is top-notch, the team handled every detail professionally, and the VIP club experience at night was the perfect reward for our staff. Highly recommend."
+        </p>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#c9a84c,#a07830);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#0c0c0e;flex-shrink:0;">F</div>
+          <div>
+            <div style="font-size:14px; font-weight:500; color:#e8e4d8;">Funmilayo A.</div>
+            <div style="font-size:11px; color:#5a5a6a; display:flex; align-items:center; gap:5px;"><span style="color:#c9a84c;">★</span> Google Review — Verified Stay</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rating badge -->
+    <div style="margin-top:40px; text-align:center;">
+      <div style="display:inline-flex; align-items:center; gap:16px; padding:16px 28px; background:#18181d; border:1px solid #c9a84c33; border-radius:4px;">
+        <div>
+          <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:40px; font-weight:600; line-height:1;">4.5</div>
+          <div class="stars" style="font-size:12px;"><span>★</span><span>★</span><span>★</span><span>★</span><span style="opacity:0.4;">★</span></div>
+        </div>
+        <div style="width:1px; background:#2a2a32; height:48px;"></div>
+        <div style="text-align:left;">
+          <div style="font-size:13px; color:#e8e4d8; font-weight:500;">Verified Google Rating</div>
+          <div style="font-size:12px; color:#5a5a6a; margin-top:2px;">10Kobo Hotel & Suites, Lagos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LOCATION & DIRECTIONS
+═══════════════════════════════════════════ -->
+<section id="location" class="py-28 section-reveal" style="background:linear-gradient(180deg,#0a0a0e 0%,#0c0c12 100%); position:relative; overflow:hidden;">
+
+  <!-- Background decorative elements -->
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;" class="shimmer-line"></div>
+  <div style="position:absolute;top:50%;left:5%;transform:translateY(-50%);width:400px;height:400px;background:radial-gradient(ellipse,#c9a84c07 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;" class="shimmer-line"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <div class="section-label mb-3">Find Us</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(38px,4.5vw,58px); font-weight:400; color:#e8e4d8; line-height:1.1;">
+        Location &amp; <em class="gold-text" style="font-style:italic;">Directions</em>
+      </h2>
+      <p style="color:#5a5a6a; font-size:14px; max-width:440px; margin:12px auto 0; line-height:1.8;">
+        We are easy to find in the heart of Egbe, Ikotun. Use the live map below to get turn-by-turn directions straight to our door.
+      </p>
+    </div>
+
+    <!-- Two-Column Layout: Info Left, Map Right -->
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+      <!-- ── LEFT: Address + Phone + Policies ── -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+
+        <!-- Address Card -->
+        <div style="padding:28px; background:#13131a; border:1px solid #c9a84c33; border-radius:8px; position:relative; overflow:hidden;">
+          <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(ellipse at top right,#c9a84c10,transparent);pointer-events:none;"></div>
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <div style="width:46px;height:46px;background:linear-gradient(135deg,#c9a84c,#a07830);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0c0c0e" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#c9a84c; margin-bottom:10px; font-weight:600;">Our Address</div>
+              <div style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:#e8e4d8; line-height:1.3; margin-bottom:8px; text-transform:uppercase; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1,'kern' 1;">10Kobo Hotel &amp; Suites</div>
+              <div style="font-size:14.5px; color:#a09880; line-height:1.9;">
+                20/21 Abanishe Street,<br/>
+                Cele Egbe Bus Stop, Road off Hostel,<br/>
+                Egbe, Ikotun,<br/>
+                <strong style="color:#c9a84c;">Lagos, Nigeria</strong>
+              </div>
+              <!-- Landmark note -->
+              <div style="margin-top:14px; padding:10px 14px; background:#1e1e26; border-left:3px solid #c9a84c; border-radius:0 4px 4px 0;">
+                <div style="font-size:11px; color:#c9a84c; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:3px;">Landmark</div>
+                <div style="font-size:13px; color:#7a7a8a; line-height:1.6;">Off the main Ikotun–Egbe Road, near Cele Egbe Bus Stop. Look for the hotel signage on Abanishe Street.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Card -->
+        <div style="padding:24px 28px; background:#13131a; border:1px solid #2a2a32; border-radius:8px; display:flex; gap:14px; align-items:center; transition: border-color 0.3s;" onmouseover="this.style.borderColor='#c9a84c55'" onmouseout="this.style.borderColor='#2a2a32'">
+          <div style="width:46px;height:46px;background:linear-gradient(135deg,#c9a84c22,#c9a84c0a);border:1px solid #c9a84c44;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.58 5a2 2 0 0 1 1.9-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#c9a84c; margin-bottom:6px; font-weight:600;">Call Us Directly</div>
+            <a href="tel:+2349166957914" style="font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:600; color:#e8c870; text-decoration:none; letter-spacing:0.02em;">+234 916 695 7914</a>
+            <div style="font-size:12px; color:#5a5a6a; margin-top:2px;">Available 24 hours, 7 days a week</div>
+          </div>
+        </div>
+
+        <!-- Check-In / Check-Out Policy -->
+        <div style="padding:24px 28px; background:#13131a; border:1px solid #2a2a32; border-radius:8px;">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#c9a84c; margin-bottom:16px; font-weight:600;">Check-In &amp; Check-Out Policy</div>
+          <div class="grid grid-cols-2 gap-4">
+            <div style="text-align:center; padding:16px; background:#0e0e14; border:1px solid #2a2a32; border-radius:6px;">
+              <div style="font-size:10px; color:#5a5a6a; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px;">Check-In</div>
+              <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600; line-height:1;">3:00 PM</div>
+              <div style="font-size:11px; color:#4a4a5a; margin-top:6px;">Earliest standard time</div>
+            </div>
+            <div style="text-align:center; padding:16px; background:#0e0e14; border:1px solid #2a2a32; border-radius:6px;">
+              <div style="font-size:10px; color:#5a5a6a; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px;">Check-Out</div>
+              <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600; line-height:1;">11:00 AM</div>
+              <div style="font-size:11px; color:#4a4a5a; margin-top:6px;">Late check-out on request</div>
+            </div>
+          </div>
+          <div style="margin-top:12px; padding:10px 14px; background:#1a1a22; border-radius:4px; font-size:12.5px; color:#5a5a6a; text-align:center; line-height:1.6;">
+            Early check-in &amp; late check-out subject to availability · Front desk open <strong style="color:#8a8a9a;">24/7</strong>
+          </div>
+        </div>
+
+        <!-- Get Directions CTA -->
+        <a href="https://www.google.com/maps/dir/?api=1&destination=6.5370551,3.2788079" target="_blank" rel="noopener"
+           style="display:flex; align-items:center; justify-content:center; gap:10px; padding:16px 24px; border-radius:8px; text-decoration:none; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; transition:all 0.3s; background:linear-gradient(135deg,#c9a84c,#a07830); color:#0c0c0e;"
+           onmouseover="this.style.boxShadow='0 8px 32px rgba(201,168,76,0.4)'; this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.boxShadow='none'; this.style.transform='none'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          Get Turn-by-Turn Directions
+        </a>
+      </div>
+
+      <!-- ── RIGHT: Live Route Tracker / Directions Mode Dashboard ── -->
+      <div class="location-tracker-sticky" style="position:sticky; top:100px;">
+
+        <!--
+        ═══════════════════════════════════════════════════
+        LIVE ROUTE TRACKER — DIRECTIONS MODE DASHBOARD
+        ═══════════════════════════════════════════════════
+        GOOGLE MAPS EMBED API — DIRECTIONS MODE
+        ───────────────────────────────────────────────────
+        HOW TO ACTIVATE:
+          1. Go to: https://console.cloud.google.com/
+          2. Enable "Maps Embed API" for your project
+          3. Copy your API key
+          4. Replace  YOUR_GOOGLE_MAPS_API_KEY  below with it
+          5. Save — the directions panel will go live instantly
+        ═══════════════════════════════════════════════════
+        -->
+
+        <!-- Dashboard outer card -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 shadow-xl" style="box-shadow: 0 25px 70px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.08); background:#111116;">
+
+          <!-- ── Card Top Bar ── -->
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid #27272a;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <!-- Animated live dot -->
+              <span style="position:relative; display:inline-flex; width:10px; height:10px;">
+                <span style="position:absolute; inset:0; border-radius:50%; background:#c9a84c; opacity:0.4; animation:ping 1.5s cubic-bezier(0,0,0.2,1) infinite;"></span>
+                <span style="position:relative; width:10px; height:10px; border-radius:50%; background:#c9a84c; box-shadow:0 0 8px #c9a84c99;"></span>
+              </span>
+              <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700; color:#c9a84c;">Live Route Tracker</span>
+            </div>
+
+          </div>
+
+
+          <!-- ── Embedded Google Maps iframe (no API key needed) ── -->
+          <div style="position:relative; border-radius:14px; overflow:hidden; border:1px solid #3f3f46; box-shadow:0 8px 40px rgba(0,0,0,0.55);">
+
+            <!-- Gold corner accents -->
+            <span style="position:absolute;top:0;left:0;z-index:5;width:18px;height:18px;border-top:2px solid rgba(201,168,76,0.7);border-left:2px solid rgba(201,168,76,0.7);border-radius:14px 0 0 0;pointer-events:none;"></span>
+            <span style="position:absolute;top:0;right:0;z-index:5;width:18px;height:18px;border-top:2px solid rgba(201,168,76,0.7);border-right:2px solid rgba(201,168,76,0.7);border-radius:0 14px 0 0;pointer-events:none;"></span>
+            <span style="position:absolute;bottom:0;left:0;z-index:5;width:18px;height:18px;border-bottom:2px solid rgba(201,168,76,0.7);border-left:2px solid rgba(201,168,76,0.7);border-radius:0 0 0 14px;pointer-events:none;"></span>
+            <span style="position:absolute;bottom:0;right:0;z-index:5;width:18px;height:18px;border-bottom:2px solid rgba(201,168,76,0.7);border-right:2px solid rgba(201,168,76,0.7);border-radius:0 0 14px 0;pointer-events:none;"></span>
+
+            <style>
+              #hotelMapIframe { width:100%; height:320px; display:block; border:0; filter:grayscale(0.3) brightness(0.88); transition:filter 0.6s ease; }
+              #hotelMapIframe:hover, #hotelMapIframe:focus { filter:grayscale(0) brightness(1); }
+              @media (min-width:640px)  { #hotelMapIframe { height:380px; } }
+              @media (min-width:768px)  { #hotelMapIframe { height:440px; } }
+              @media (min-width:1024px) { #hotelMapIframe { height:500px; } }
+            </style>
+            <iframe
+              id="hotelMapIframe"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3963.878259522539!2d3.2788079!3d6.5370551!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8fd9a0407b71%3A0x4bd0d906ee58b53e!2s10Kobo%20Hotel%20and%20Suites!5e0!3m2!1sen!2sng!4v1779553496288!5m2!1sen!2sng"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="10Kobo Hotel and Suites — Google Maps"
+            ></iframe>
+          </div>
+
+
+          <!-- ── Action Row ── -->
+          <div style="display:flex; gap:8px; margin-top:14px; padding-top:14px; border-top:1px solid #27272a;">
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=6.5370551,3.2788079&travelmode=driving" target="_blank" rel="noopener"
+               style="flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px; border-radius:10px; text-decoration:none; font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; transition:all 0.3s; background:linear-gradient(135deg,#c9a84c,#a07830); color:#0c0c0e;"
+               onmouseover="this.style.boxShadow='0 6px 24px rgba(201,168,76,0.45)'; this.style.transform='translateY(-1px)'"
+               onmouseout="this.style.boxShadow='none'; this.style.transform='none'">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              Navigate Now
+            </a>
+
+            <a href="https://wa.me/2349166957914?text=Hi%2C+I%20need%20directions%20to%2010Kobo%20Hotel%20%26%20Suites" target="_blank" rel="noopener noreferrer"
+               style="display:flex; align-items:center; justify-content:center; gap:8px; padding:12px 16px; border-radius:10px; text-decoration:none; font-size:12px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; transition:all 0.3s; background:#1c1c22; border:1px solid #3f3f46; color:#71717a;"
+               onmouseover="this.style.borderColor='#25d36644'; this.style.color='#25d366'; this.style.background='#25d36614'"
+               onmouseout="this.style.borderColor='#3f3f46'; this.style.color='#71717a'; this.style.background='#1c1c22'">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Ask on WhatsApp
+            </a>
+
+          </div>
+
+          <!-- GPS coordinates footer -->
+          <div style="margin-top:12px; text-align:center; font-size:10px; color:#3f3f46; letter-spacing:0.08em; font-family:'DM Sans',sans-serif;">
+            GPS · 6.5371°N &nbsp;|&nbsp; 3.2788°E &nbsp;|&nbsp; Egbe-Ikotun, Lagos, Nigeria
+          </div>
+
+        </div>
+      </div>
+      <!-- ── END: Live Route Tracker ── -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT & FOOTER
+═══════════════════════════════════════════ -->
+<section id="contact" class="py-28 section-reveal" style="background:linear-gradient(180deg,#0c0c0e,#09090d);">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center mb-16">
+      <div class="section-label mb-3">Get In Touch</div>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(38px,4.5vw,58px); font-weight:400; color:#e8e4d8; line-height:1.1;">
+        Book Your <em class="gold-text" style="font-style:italic;">Experience</em>
+      </h2>
+      <p style="color:#5a5a6a; font-size:14px; max-width:440px; margin:12px auto 0; line-height:1.8;">
+        Ready to check in? Have a question? Reach us directly or fill the form and our team will respond promptly.
+      </p>
+    </div>
+
+    <div class="max-w-2xl mx-auto w-full">
+
+      <!-- Contact form -->
+      <div>
+        <form id="contactForm" onsubmit="handleSubmit(event)" style="display:flex; flex-direction:column; gap:16px;">
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group">
+              <label class="form-label" for="field-name">Full Name</label>
+              <input id="field-name" type="text" placeholder="e.g. Adebayo Okafor" required class="form-input" style="border-radius:var(--r-sm);"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="field-contact">Phone / Email</label>
+              <input id="field-contact" type="text" placeholder="e.g. +234 800 000 0000" required class="form-input" style="border-radius:var(--r-sm);"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="field-service">I'm Interested In</label>
+            <select id="field-service" class="form-input" style="border-radius:var(--r-sm);">
+              <option value="" style="background:#18181d;">Select a service…</option>
+              <optgroup label="─── Rooms ───────────────────" style="background:#18181d; color:#c9a84c;">
+                <option style="background:#18181d;">Classic Room — ₦45,000 / night</option>
+                <option style="background:#18181d;">Deluxe Room — ₦55,000 / night</option>
+                <option style="background:#18181d;">Executive Room — ₦65,000 / night</option>
+                <option style="background:#18181d;">Premium Suite — ₦105,000 / night</option>
+              </optgroup>
+              <optgroup label="─── Events & More ───────────" style="background:#18181d; color:#c9a84c;">
+                <option style="background:#18181d;">VIP Club Night Table</option>
+                <option style="background:#18181d;">Private Event / Wedding</option>
+                <option style="background:#18181d;">Conference / Corporate Retreat</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="field-checkin">Check-In Date</label>
+            <input id="field-checkin" type="date" class="form-input" style="border-radius:var(--r-sm); color-scheme:dark;"/>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="field-message">Your Message</label>
+            <textarea id="field-message" rows="4" placeholder="Tell us about your needs, number of guests, special requests…" class="form-input" style="border-radius:var(--r-sm); resize:vertical;"></textarea>
+          </div>
+
+          <div class="sep-gold" style="margin:2px 0;"></div>
+
+          <button type="submit" class="btn-gold w-full py-4 text-sm tracking-widest rounded-lg mt-1" style="border-radius:var(--r-md);">
+            <span style="display:flex; align-items:center; justify-content:center; gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Enquiry
+            </span>
+          </button>
+
+          <p style="text-align:center; font-size:11.5px; color:var(--clr-text-4); margin-top:-4px;">
+            Submitting opens <strong style="color:var(--clr-text-3);">WhatsApp</strong> with your details pre-filled · We respond within <strong style="color:var(--clr-text-3);">1 hour</strong>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ShadCN-style Toast Notification ── -->
+<div id="toast" role="alert" aria-live="polite">
+  <div id="toast-icon">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <div>
+    <div class="toast-msg" style="font-size:13.5px; font-weight:600; color:#e8e4d8; line-height:1.2;">Enquiry Sent via WhatsApp!</div>
+    <div style="font-size:12px; color:#71717a; margin-top:3px;">The hotel team will reply to you shortly.</div>
+  </div>
+  <button onclick="document.getElementById('toast').classList.remove('show')" style="margin-left:auto; background:none; border:none; color:#71717a; cursor:pointer; padding:2px; flex-shrink:0;" aria-label="Close">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer style="background:#07070b; border-top:1px solid #1a1a22; padding:60px 0 28px;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand -->
+      <div class="md:col-span-2">
+        <a href="#hero" class="footer-logo-link" aria-label="10Kobo Hotel and Suites — Back to top" style="margin-bottom:16px;">
+          <!-- Official 10Kobo coin logo — place logo.png in the same folder as this HTML file -->
+          <div class="footer-logo-coin w-14 h-14 rounded-full overflow-hidden border border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.4)]" style="flex-shrink:0; transition: filter 0.25s ease, box-shadow 0.25s ease;">
+            <img src="logo.png" alt="10Kobo Hotel Logo" class="w-full h-full object-cover scale-[1.38]">
+          </div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#e8c870;letter-spacing:0.05em;text-transform:uppercase;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1,'kern' 1;">10Kobo Hotel &amp; Suites</div>
+            <div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#4a4a5a;">Lagos's Premier Urban Oasis</div>
+          </div>
+        </a>
+        <p style="font-size:13px; color:#4a4a5a; line-height:1.9; max-width:340px; margin-bottom:20px; margin-top:16px;">
+          Where luxury lodging, premium dining, and electric nightlife converge in the heart of Alimosho, Lagos. Your unforgettable experience starts here.
+        </p>
+        <div style="display:flex; gap:10px;">
+          <a href="https://www.instagram.com/10kobohotelandsuite/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener" class="footer-social-btn" style="width:36px;height:36px;background:#18181d;border:1px solid #2a2a32;border-radius:4px;display:flex;align-items:center;justify-content:center;" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/18fAUi26QF/" target="_blank" rel="noopener" class="footer-social-btn" style="width:36px;height:36px;background:#18181d;border:1px solid #2a2a32;border-radius:4px;display:flex;align-items:center;justify-content:center;" title="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/2349166957914" class="footer-social-btn" style="width:36px;height:36px;background:#18181d;border:1px solid #2a2a32;border-radius:4px;display:flex;align-items:center;justify-content:center;" title="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h5 style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:16px;">Quick Links</h5>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="#about"      class="footer-link">About Us</a>
+          <a href="#rooms"      class="footer-link">Rooms &amp; Suites</a>
+          <a href="#amenities"  class="footer-link">Amenities</a>
+          <a href="#nightlife"  class="footer-link">Club Night</a>
+          <a href="#location"   class="footer-link">Location</a>
+          <a href="#contact"    class="footer-link">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h5 style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:16px;">Contact</h5>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div>
+            <div style="font-size:11px;color:#3a3a4a;margin-bottom:2px;">Phone</div>
+            <a href="tel:+2349166957914" class="footer-link" style="font-size:13px;">+234 916 695 7914</a>
+          </div>
+          <div>
+            <div style="font-size:11px;color:#3a3a4a;margin-bottom:2px;">Address</div>
+            <div style="font-size:13px;color:#8a8a9a;line-height:1.7;">20/21 Abanishe Street,<br/>Egbe-Ikotun, Lagos</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:#3a3a4a;margin-bottom:2px;">Hours</div>
+            <div style="font-size:13px;color:#8a8a9a;">24 Hours, Every Day</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shimmer-line"></div>
+
+    <div style="display:flex; flex-direction:column; align-items:center; gap:6px; margin-top:24px; text-align:center;">
+      <p style="font-size:11px; color:#3a3a4a; letter-spacing:0.1em; margin:0;">
+        &copy; 2026 Lagos Finest Hospitality. All rights reserved. &nbsp;|&nbsp; Egbe, Alimosho, Lagos, Nigeria.
+      </p>
+      <p style="font-size:11px; color:#3a3a4a; letter-spacing:0.08em; margin:0;">
+        Designed by <span style="color:#c9a84c; font-weight:600; letter-spacing:0.06em;">VEKTOR WEB</span>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+</div><!-- /#main-content-wrapper -->
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════ -->
+<script>
+// ════════════════════════════════════════════════════════════
+//  SUBTLE INTERACTION SYSTEM
+//  "Not crazy. Just quality."
+// ════════════════════════════════════════════════════════════
+
+// ══════════════════════════════════════════════════════════════════
+//  NAVIGATION SYSTEM — unified, single source of truth
+//  1. Header: transparent at top → liquid glass blur on scroll > 20px
+//  2. Scroll-spy: IntersectionObserver auto-activates correct nav link
+//     - Desktop: solid black capsule (.nav-active)
+//     - Mobile:  gold text only (.mob-nav-active) — no capsule shapes
+//  3. Mobile menu: burger ↔ X morph + drop-down drawer
+// ══════════════════════════════════════════════════════════════════
+
+// ── Navigation state ──────────────────────────────────────────────
+var menuOpen = false;
+
+// ── Mobile menu toggle — defined FIRST so burger taps always work ──
+function toggleMenu() {
+  menuOpen = !menuOpen;
+  var menu   = document.getElementById('mobile-menu');
+  var burger = document.getElementById('burger');
+  var b1     = document.getElementById('b1');
+  var b2     = document.getElementById('b2');
+  var b3     = document.getElementById('b3');
+
+  if (menuOpen) {
+    menu.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    if (burger) burger.setAttribute('aria-expanded', 'true');
+    if (b1) b1.style.transform = 'rotate(45deg) translateY(8px)';
+    if (b2) { b2.style.opacity = '0'; b2.style.transform = 'scaleX(0)'; }
+    if (b3) b3.style.transform = 'rotate(-45deg) translateY(-8px)';
+  } else {
+    menu.style.display = 'none';
+    document.body.style.overflow = '';
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+    if (b1) b1.style.transform = '';
+    if (b2) { b2.style.opacity = '1'; b2.style.transform = ''; }
+    if (b3) b3.style.transform = '';
+  }
+}
+
+// ── 1. Header scroll transparency / glass blur ────────────────────
+// Adds/removes .nav-glass class for CSS-driven frosted-glass effect
+// The CSS transition on #navbar handles the smooth fade animation.
+(function() {
+  var navbar = document.getElementById('navbar');
+  if (!navbar) return;
+
+  function applyHeaderState() {
+    if (window.scrollY > 20) {
+      navbar.classList.add('nav-glass');
+    } else {
+      navbar.classList.remove('nav-glass');
+    }
+  }
+
+  window.addEventListener('scroll', applyHeaderState, { passive: true });
+  applyHeaderState(); // run immediately on load
+})();
+
+// ── 2. Scroll progress bar ─────────────────────────────────────────
+function updateProgress() {
+  var progressBar = document.getElementById('scroll-progress');
+  if (!progressBar) return;
+  var scrollTop  = window.scrollY;
+  var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+  if (docHeight > 0) progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+
+// ── 3. Hero parallax ──────────────────────────────────────────────
+window.addEventListener('scroll', function() {
+  var heroBg = document.getElementById('heroBg');
+  if (heroBg && window.scrollY < window.innerHeight * 1.2) {
+    heroBg.style.transform = 'translateY(' + (window.scrollY * 0.22) + 'px)';
+  }
+}, { passive: true });
+
+// ── 4. Scroll-spy: IntersectionObserver — auto-active capsule ─────
+//    Desktop: adds/removes .nav-active (solid black capsule + gold text)
+//    Mobile:  adds/removes .mob-nav-active (gold text only, no shape)
+(function() {
+  var spySections = Array.from(document.querySelectorAll('section[id]'));
+  if (!spySections.length) return;
+
+  var activeSection = '';
+
+  function applyActiveNav(id) {
+    if (id === activeSection) return;
+    activeSection = id;
+
+    // Desktop links
+    document.querySelectorAll('.desk-nav-link').forEach(function(a) {
+      var isActive = a.dataset.section === id;
+      a.classList.toggle('nav-active', isActive);
+      a.classList.toggle('active', isActive);
+    });
+
+    // Mobile links — gold text only, never capsule
+    document.querySelectorAll('.mob-nav-link').forEach(function(a) {
+      if (a.dataset.section === id) {
+        a.classList.add('mob-nav-active');
+      } else {
+        a.classList.remove('mob-nav-active');
+      }
+    });
+  }
+
+  // IntersectionObserver: 20% of section visible → mark active
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        applyActiveNav(entry.target.id);
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+
+  spySections.forEach(function(s) { observer.observe(s); });
+})();
+
+// ── Close drawer on outside tap ───────────────────────────────────
+document.addEventListener('click', function(e) {
+  if (!menuOpen) return;
+  var menu   = document.getElementById('mobile-menu');
+  var burger = document.getElementById('burger');
+  if (menu && burger && !menu.contains(e.target) && !burger.contains(e.target)) {
+    toggleMenu();
+  }
+}, { passive: true });
+
+// ── Section reveal + stagger grid children ───────────────────
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    revealObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.08 });
+
+const staggerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('in-view');
+    staggerObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.06 });
+
+document.querySelectorAll('.section-reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.stagger-children').forEach(el => staggerObserver.observe(el));
+
+// ── Image fade-in on load ─────────────────────────────────────
+// Images with data-fade start at opacity:0 (CSS rule). This JS
+// adds .img-loaded (opacity:1) once each image has fully loaded.
+document.querySelectorAll('img[data-fade]').forEach(function(img) {
+  if (img.complete && img.naturalWidth > 0) {
+    img.classList.add('img-loaded'); // already cached — reveal immediately
+  } else {
+    img.addEventListener('load',  function() { img.classList.add('img-loaded'); });
+    img.addEventListener('error', function() { img.style.opacity = '0'; }); // keep hidden if broken
+  }
+});
+
+// ── Non-data-fade image error handler — silently hide broken images ──
+document.querySelectorAll('img:not([data-fade])').forEach(function(img) {
+  if (img.complete && img.naturalWidth === 0) {
+    img.style.opacity = '0';
+  } else {
+    img.addEventListener('error', function() { img.style.opacity = '0'; });
+  }
+});
+
+// ── Button ripple disabled — caused square flash on Android ──
+
+// ── Animated stat counters ────────────────────────────────────
+function animateCounter(el) {
+  const target  = parseFloat(el.dataset.target);
+  const suffix  = el.dataset.suffix || '';
+  const decimal = el.dataset.decimal === 'true';
+  const duration = 1600;
+  const start   = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    // Ease-out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const val   = target * eased;
+    el.textContent = (decimal ? val.toFixed(1) : Math.floor(val)) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = (decimal ? target.toFixed(1) : target) + suffix;
+  }
+  requestAnimationFrame(step);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    animateCounter(entry.target);
+    counterObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+// ── Contact form submit — delivers to WhatsApp ───────────────
+// Every enquiry is sent directly to the hotel's WhatsApp number.
+// This ensures no booking is ever lost, even without a backend.
+const HOTEL_WA_NUMBER = '2349166957914'; // Hotel WhatsApp number
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const originalHTML = btn.innerHTML;
+
+  // Read form fields
+  const name     = (document.getElementById('field-name')?.value    || '').trim();
+  const contact  = (document.getElementById('field-contact')?.value || '').trim();
+  const service  = (document.getElementById('field-service')?.value || '').trim();
+  const checkin  = (document.getElementById('field-checkin')?.value || '').trim();
+  const message  = (document.getElementById('field-message')?.value || '').trim();
+
+  // ── Validation: name + contact are required ───────────────────────
+  if (!name || !contact) {
+    // Shake the empty required fields to signal the error visually
+    ['field-name', 'field-contact'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el && !el.value.trim()) {
+        el.style.borderColor = '#f87171';
+        el.style.animation = 'fieldShake 0.4s ease';
+        el.setAttribute('aria-invalid', 'true');
+        el.addEventListener('animationend', function() {
+          el.style.animation = '';
+        }, { once: true });
+        setTimeout(function() {
+          el.style.borderColor = '';
+          el.removeAttribute('aria-invalid');
+        }, 2200);
+      }
+    });
+    // Show inline error toast
+    const toast = document.getElementById('toast');
+    if (toast) {
+      const msgEl = toast.querySelector('.toast-msg');
+      const origMsg = msgEl ? msgEl.textContent : '';
+      if (msgEl) msgEl.textContent = 'Please fill in your name and contact details.';
+      toast.style.background = '#1a0a0a';
+      toast.style.borderColor = '#f8717155';
+      toast.classList.add('show');
+      setTimeout(function() {
+        toast.classList.remove('show');
+        setTimeout(function() {
+          toast.style.background = '';
+          toast.style.borderColor = '';
+          if (msgEl) msgEl.textContent = origMsg;
+        }, 400);
+      }, 3000);
+    }
+    return; // stop — do not open WhatsApp with empty fields
+  }
+
+  // Compose a clean, formatted WhatsApp message
+  const lines = [
+    '🏨 *New Booking Enquiry — 10Kobo Hotel & Suites*',
+    '',
+    `👤 *Name:* ${name || 'Not provided'}`,
+    `📞 *Contact:* ${contact || 'Not provided'}`,
+  ];
+  if (service) lines.push(`🛏️ *Service:* ${service}`);
+  if (checkin) lines.push(`📅 *Check-In:* ${checkin}`);
+  if (message) lines.push(`💬 *Message:* ${message}`);
+  lines.push('', '_Sent via 10Kobo Hotel website_');
+
+  const waText = encodeURIComponent(lines.join('\n'));
+  const waURL  = `https://wa.me/${HOTEL_WA_NUMBER}?text=${waText}`;
+
+  // Show sending state
+  btn.innerHTML = '<span style="display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spinSlow 0.8s linear infinite"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg> Opening WhatsApp…</span>';
+  btn.style.opacity = '0.75';
+  btn.disabled = true;
+
+  // Open WhatsApp with pre-filled message
+  setTimeout(() => {
+    window.open(waURL, '_blank', 'noopener,noreferrer');
+
+    btn.innerHTML = '<span style="display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sent via WhatsApp!</span>';
+    btn.style.opacity = '1';
+    btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+    btn.style.boxShadow  = '0 6px 24px rgba(34,197,94,0.35)';
+    e.target.reset();
+
+    const toast = document.getElementById('toast');
+    if (toast) {
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4500);
+    }
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.style.background = btn.style.boxShadow = '';
+      btn.disabled = false;
+    }, 3500);
+  }, 800);
+}
+
+// ═══════════════════════════════════════════════════════════════
+
+// ── Guard: neutralise any stray window.initMap from browser extensions ──
+// The site uses a static iframe — no Maps JS API is loaded or needed.
+window.initMap = function() {};  // no-op safety stub
+
+// ── Logo tap glow: JS for reliable iOS Safari instant response ──
+// CSS :active can be delayed ~300ms on iOS. touchstart fires at 0ms.
+(function attachLogoTapGlow() {
+  // Header logo
+  var hw = document.querySelector('.logo-wrap');
+  if (hw) {
+    hw.addEventListener('touchstart', function() { hw.classList.add('logo-tap-active'); }, { passive: true });
+    hw.addEventListener('touchend',   function() { setTimeout(function(){ hw.classList.remove('logo-tap-active'); }, 180); }, { passive: true });
+    hw.addEventListener('touchcancel',function() { hw.classList.remove('logo-tap-active'); }, { passive: true });
+  }
+  // Footer logo
+  var fw = document.querySelector('.footer-logo-link');
+  if (fw) {
+    fw.addEventListener('touchstart', function() { fw.classList.add('footer-logo-tap-active'); }, { passive: true });
+    fw.addEventListener('touchend',   function() { setTimeout(function(){ fw.classList.remove('footer-logo-tap-active'); }, 180); }, { passive: true });
+    fw.addEventListener('touchcancel',function() { fw.classList.remove('footer-logo-tap-active'); }, { passive: true });
+  }
+  // Remove default blue tap flash from all interactive elements
+  document.querySelectorAll('.btn-gold,.btn-outline,.btn-neon,.nav-link,.footer-link,.footer-social-btn').forEach(function(el) {
+    el.style.webkitTapHighlightColor = 'transparent';
+  });
+})();
+
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRELOADER JAVASCRIPT
+     Position: immediately before </body>
+     Uses window.load so images/fonts are fully ready first.
+═══════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  var preloader = document.getElementById('preloader');
+  var wrapper   = document.getElementById('main-content-wrapper');
+  var body      = document.body;
+  var dismissed = false;
+
+  /* How long to show the preloader even on fast connections (ms).
+     Keeps the animation visible for brand impact.              */
+  var MIN_DISPLAY_MS = 1800;
+  var startTime      = Date.now();
+
+  function dismissPreloader () {
+    if (dismissed) return;
+    dismissed = true;
+
+    /* Re-enable scrolling */
+    body.classList.remove('preloader-active');
+
+    /* 1. Fade the preloader out (0.85s CSS transition) */
+    if (preloader) {
+      preloader.classList.add('preloader-hidden');
+    }
+
+    /* 2. Reveal main content: slight overlap = cinematic feel   */
+    setTimeout(function () {
+      if (wrapper) wrapper.classList.add('content-visible');
+    }, 200);
+
+    /* 3. Pull preloader completely out of the layout once gone  */
+    setTimeout(function () {
+      if (preloader) {
+        preloader.style.display = 'none';
+        preloader.removeAttribute('aria-live');
+      }
+    }, 1200); /* 0.85s transition + 350ms safety buffer          */
+  }
+
+  /* ── Wait for everything: images, fonts, iframes ───────────── */
+  window.addEventListener('load', function () {
+    var elapsed   = Date.now() - startTime;
+    var remaining = Math.max(0, MIN_DISPLAY_MS - elapsed);
+    setTimeout(dismissPreloader, remaining);
+  });
+
+  /* ── Absolute safety net: dismiss after 7s regardless ──────── */
+  setTimeout(dismissPreloader, 7000);
+
+})();
+</script>
+
+</body>
+</html>
