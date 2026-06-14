@@ -227,6 +227,10 @@
     /* Prevent clipping on descenders */
     padding-bottom: 0.05em;
     display: inline-block;
+    /* Force cap-height numerals: stops "10" appearing smaller than letters
+       in Cormorant Garamond, which defaults to old-style (varying-height) figures */
+    font-variant-numeric: lining-nums;
+    font-feature-settings: 'lnum' 1;
   }
 
   /* Neon text */
@@ -2336,9 +2340,9 @@
       hyphens: auto;
     ">
       Welcome to<br>
-      <!-- The gold gradient em is set separately so -webkit-text-fill-color
-           on the parent doesn't bleed into it (they're different paints) -->
-      <em class="gold-text" style="
+      <!-- span instead of em: avoids italic-induced numeral size shift in Cormorant.
+           font-variant-numeric:lining-nums forces "10" to cap-height, matching the letters. -->
+      <span class="gold-text" style="
         font-style: italic;
         font-weight: 600;
         font-size: inherit;
@@ -2346,7 +2350,9 @@
         text-transform: uppercase;
         display: inline;
         vertical-align: baseline;
-      ">10Kobo Hotel</em><span style="
+        font-variant-numeric: lining-nums;
+        font-feature-settings: 'lnum' 1, 'kern' 1;
+      ">10Kobo Hotel</span><span style="
         color: #f0ece0 !important;
         -webkit-text-fill-color: #f0ece0 !important;
         font-weight: 600;
