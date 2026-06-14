@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="color-scheme" content="dark only"/>
 <title>10Kobo Hotel &amp; Suites | Luxury Hotel &amp; Accommodation</title>
 <meta name="description" content="Welcome to 10Kobo Hotel &amp; Suites. Experience premium luxury, exquisite dining, and world-class accommodation. Book your stay today."/>
 <meta name="keywords" content="10Kobo hotel, 10 kobo, luxury suites, hotel booking, luxury accommodation, Lagos"/>
@@ -67,6 +68,10 @@
     --clr-neon:       #e8ff47;
     --clr-green:      #4ade80;
 
+    /* Force the browser to treat this document as dark — prevents
+       automatic color inversion on Android Chrome / Samsung Internet */
+    color-scheme: dark only;
+
     /* Spacing scale */
     --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;
     --sp-4: 16px;  --sp-5: 20px;  --sp-6: 24px;
@@ -114,11 +119,13 @@
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
+    /* Prevent iOS/Android from auto-adjusting our dark palette */
+    color-scheme: dark only;
   }
 
   body {
-    background: var(--clr-bg);
-    color: var(--clr-text-1);
+    background: var(--clr-bg) !important;
+    color: var(--clr-text-1) !important;
     font-family: var(--font-body);
     font-size: 15px;
     line-height: 1.6;
@@ -127,6 +134,43 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    /* Stop browsers (Samsung Internet, old Android WebView) from
+       force-inverting colours on our intentionally dark layout    */
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+  /* ── Hard override: block any system dark-mode rewrite ──────── */
+  /* Some mobile browsers inject their own dark-mode palette even  */
+  /* when the page already IS dark. This ruleset nullifies that.   */
+  @media (prefers-color-scheme: dark) {
+    html, body {
+      background-color: #0c0c0e !important;
+      color: #e8e4d8 !important;
+    }
+    /* Ensure gold text gradient is never replaced with a flat system colour */
+    .gold-text {
+      background: linear-gradient(135deg, #e8c870 0%, #c9a84c 45%, #a07830 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    /* Lock button colours */
+    .btn-gold {
+      background: linear-gradient(135deg, #d4b155 0%, #c9a84c 50%, #a07830 100%) !important;
+      color: #0c0c0e !important;
+    }
+    .btn-outline {
+      border-color: rgba(201,168,76,0.45) !important;
+      color: #e8c870 !important;
+      background: transparent !important;
+    }
+    .btn-neon {
+      background: #e8ff47 !important;
+      color: #0c0c0e !important;
+    }
+    /* Prevent system dark mode from touching our neon text */
+    .neon-text { color: #e8ff47 !important; }
   }
 
   /* Premium text selection */
@@ -1998,7 +2042,7 @@
   img { transition: filter 0.4s var(--ease-smooth, ease); }
 </style>
 </head>
-<body class="bg-charcoal preloader-active">
+<body class="bg-charcoal preloader-active" style="background-color:#0c0c0e; color:#e8e4d8;">
 
 <!-- ═══════════════════════════════════════════════════════════
      PRELOADER — Ultra-luxury intro · 10Kobo Hotel & Suites
@@ -2189,110 +2233,255 @@
 <!-- ═══════════════════════════════════════════
      HERO SECTION — Full-Screen Photo Background
 ═══════════════════════════════════════════ -->
-<section id="hero" class="bg-cover bg-center bg-no-repeat" style="min-height:100vh; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; background-color:#07070b;">
+<section
+  id="hero"
+  aria-label="Welcome to 10Kobo Hotel and Suites"
+  style="
+    position: relative;
+    overflow: hidden;
+    min-height: 100svh;          /* svh = real viewport on mobile (excludes browser chrome) */
+    min-height: 100vh;           /* fallback for older browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #07070b;   /* shown while hero image loads */
+  ">
 
-  <!-- ── Full-screen background photo ── -->
+  <!-- ── Full-screen background photo ───────────────────────────── -->
   <img
-    id="heroBg" src="file_00000000b5e071f492f7cb91c790fea0.png"
-    alt="10Kobo Hotel and Suites — Lagos"
-    loading="eager" decoding="async" fetchpriority="high"
-    style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center center; z-index:0; transform-origin:center center;">
+    id="heroBg"
+    src="file_00000000b5e071f492f7cb91c790fea0.png"
+    alt=""
+    role="presentation"
+    aria-hidden="true"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+    style="
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      /* Anchor the image on the interesting area for all orientations */
+      object-position: center 30%;
+      z-index: 0;
+      transform-origin: center center;
+    ">
 
-  <!-- ── Smooth bottom fade only — image displays at full brightness, no overlay ── -->
-  <div style="position:absolute; bottom:0; left:0; right:0; height:320px; z-index:4; background:linear-gradient(to bottom, transparent 0%, rgba(12,12,14,0.55) 50%, rgba(12,12,14,0.88) 80%, #0c0c0e 100%); pointer-events:none;"></div>
+  <!-- ── Dark scrim: full coverage so text is always readable ──── -->
+  <!-- Top & sides tint so the navbar area stays legible on all images -->
+  <div aria-hidden="true" style="
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(7,7,11,0.55)  0%,
+      rgba(7,7,11,0.20) 30%,
+      rgba(7,7,11,0.30) 65%,
+      rgba(12,12,14,0.88) 88%,
+      #0c0c0e 100%
+    );
+    pointer-events: none;
+  "></div>
 
-  <!-- ── Floating gold particles ── -->
+  <!-- ── Floating gold particles (decorative, hidden on low-motion) ── -->
   <div aria-hidden="true" class="particle" style="width:4px;height:4px;background:#c9a84c;top:18%;left:12%;animation:float1 6s ease-in-out infinite;opacity:0.55;z-index:3;"></div>
   <div aria-hidden="true" class="particle" style="width:3px;height:3px;background:#e8ff47;top:65%;left:82%;animation:float2 8s ease-in-out infinite;opacity:0.45;z-index:3;"></div>
   <div aria-hidden="true" class="particle" style="width:5px;height:5px;background:#c9a84c;top:78%;left:22%;animation:float1 7s ease-in-out infinite 1s;opacity:0.35;z-index:3;"></div>
   <div aria-hidden="true" class="particle" style="width:2px;height:2px;background:#e8c870;top:30%;left:70%;animation:float2 5s ease-in-out infinite 2s;opacity:0.6;z-index:3;"></div>
 
-  <!-- ── Centered hero content ── -->
-  <div style="position:relative; z-index:10; width:100%; text-align:center; padding:120px 24px 100px;">
+  <!-- ══════════════════════════════════════════════════════════
+       HERO CONTENT — centred column, responsive at every breakpoint
+  ══════════════════════════════════════════════════════════ -->
+  <div style="
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    /* Horizontal padding: tight on phone, generous on desktop */
+    padding: clamp(100px, 16vh, 140px) clamp(20px, 6vw, 80px) clamp(80px, 12vh, 120px);
+    text-align: center;
+    /* Cap overall content width so nothing stretches on ultra-wide screens */
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  ">
 
     <!-- Star rating label -->
-    <div class="section-label fade-up" style="margin-bottom:20px; display:inline-block;">
+    <div class="section-label fade-up" style="margin-bottom: 18px; display: inline-block; white-space: nowrap;">
       ★ 4.5 / 5 on Google &nbsp;·&nbsp; Egbe-Ikotun, Alimosho, Lagos
     </div>
 
-    <!-- Gold divider line -->
-    <div class="shimmer-line fade-up delay-1" style="max-width:160px; margin:0 auto 36px;"></div>
+    <!-- Gold shimmer divider -->
+    <div class="shimmer-line fade-up delay-1" style="max-width: 140px; width: 100%; margin: 0 auto 32px;"></div>
 
-    <!-- Main heading -->
+    <!-- ── Main heading ── -->
     <h1 class="fade-up delay-1" style="
-      font-family:'Cormorant Garamond',serif;
-      font-size:clamp(36px,6.5vw,86px);
-      line-height:1.06;
-      font-weight:400;
-      color:#f0ece0;
-      letter-spacing:-0.01em;
-      max-width:860px;
-      margin:0 auto 24px;
-      text-shadow:0 4px 32px rgba(0,0,0,0.7);">
-      Welcome to<br/>
-      <em class="gold-text" style="font-style:italic; font-weight:600; line-height:1.06; vertical-align:baseline; font-size:inherit; text-transform:uppercase; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1,'kern' 1;">10Kobo Hotel</em><span style="color:#f0ece0; font-weight:600; line-height:1.06; vertical-align:baseline; font-size:inherit;"> and Suites</span>
+      font-family: 'Cormorant Garamond', serif;
+      /* clamp: 34px on tiny phones → scales with viewport → 86px on large screens */
+      font-size: clamp(34px, 7vw, 86px);
+      line-height: 1.08;
+      font-weight: 400;
+      /* Hard-code the text colour so no browser dark-mode rewrite touches it */
+      color: #f0ece0 !important;
+      -webkit-text-fill-color: #f0ece0 !important;
+      letter-spacing: -0.01em;
+      max-width: 820px;
+      margin: 0 auto 22px;
+      text-shadow: 0 4px 32px rgba(0,0,0,0.75);
+      /* Prevent orphaned single words on narrow phones */
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+    ">
+      Welcome to<br>
+      <!-- The gold gradient em is set separately so -webkit-text-fill-color
+           on the parent doesn't bleed into it (they're different paints) -->
+      <em class="gold-text" style="
+        font-style: italic;
+        font-weight: 600;
+        font-size: inherit;
+        line-height: inherit;
+        text-transform: uppercase;
+        display: inline;
+        vertical-align: baseline;
+      ">10Kobo Hotel</em><span style="
+        color: #f0ece0 !important;
+        -webkit-text-fill-color: #f0ece0 !important;
+        font-weight: 600;
+        font-size: inherit;
+        line-height: inherit;
+        display: inline;
+      ">&nbsp;and Suites</span>
     </h1>
 
-    <!-- Subtext -->
+    <!-- ── Subtext ── -->
     <p class="fade-up delay-2" style="
-      font-size:clamp(15px,2vw,20px);
-      color:rgba(220,215,200,0.82);
-      line-height:1.75;
-      max-width:540px;
-      margin:0 auto 48px;
-      font-weight:300;
-      letter-spacing:0.01em;
-      text-shadow:0 2px 16px rgba(0,0,0,0.6);">
+      font-size: clamp(14px, 2.2vw, 19px);
+      color: rgba(220,215,200,0.84) !important;
+      -webkit-text-fill-color: rgba(220,215,200,0.84) !important;
+      line-height: 1.78;
+      max-width: 520px;
+      margin: 0 auto 44px;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.6);
+    ">
       Where luxury lodging, electric nightlife, and Nigerian warmth converge — right in the pulse of Alimosho, Lagos.
     </p>
 
-    <!-- Primary CTA button -->
-    <div class="fade-up delay-3" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px;">
-      <a href="#contact" class="btn-gold"
-         style="display:inline-flex; align-items:center; gap:10px; padding:18px 40px; font-size:14px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border-radius:6px; text-decoration:none; box-shadow:0 8px 40px rgba(201,168,76,0.45);">
+    <!-- ── CTA buttons ── -->
+    <div class="fade-up delay-3" style="
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+    ">
+      <a href="#contact"
+         class="btn-gold"
+         style="
+           display: inline-flex; align-items: center; gap: 10px;
+           /* Vertical padding stays constant; horizontal pads shrink on small screens */
+           padding: 16px clamp(22px, 5vw, 40px);
+           font-size: clamp(12px, 1.6vw, 14px);
+           font-weight: 700;
+           letter-spacing: 0.1em;
+           text-transform: uppercase;
+           border-radius: 6px;
+           text-decoration: none !important;
+           box-shadow: 0 8px 40px rgba(201,168,76,0.45);
+           white-space: nowrap;
+         ">
         <span>Book a Room Now</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#nightlife" class="btn-outline"
-         style="display:inline-flex; align-items:center; gap:10px; padding:17px 32px; font-size:14px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border-radius:6px; text-decoration:none;">
+      <a href="#nightlife"
+         class="btn-outline"
+         style="
+           display: inline-flex; align-items: center; gap: 10px;
+           padding: 15px clamp(18px, 4vw, 32px);
+           font-size: clamp(12px, 1.6vw, 14px);
+           font-weight: 600;
+           letter-spacing: 0.08em;
+           text-transform: uppercase;
+           border-radius: 6px;
+           text-decoration: none !important;
+           white-space: nowrap;
+         ">
         Explore Nightlife
-        <span class="neon-text" style="font-size:18px;">✦</span>
+        <span class="neon-text" style="font-size: 17px; line-height: 1;" aria-hidden="true">✦</span>
       </a>
     </div>
 
-    <!-- Stats bar -->
+    <!-- ── Stats bar ── -->
     <div class="fade-up delay-4" style="
-      display:inline-flex; align-items:center; gap:0;
-      margin-top:60px;
-      background:rgba(12,12,14,0.60);
-      backdrop-filter:blur(16px);
-      -webkit-backdrop-filter:blur(16px);
-      border:1px solid rgba(201,168,76,0.28);
-      border-radius:14px;
-      padding:20px 36px;
-      box-shadow:0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.06);">
-      <div style="text-align:center; padding:0 28px 0 0;">
-        <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:700; line-height:1;">4.5★</div>
-        <div style="font-size:10px; color:#6a6a7a; letter-spacing:0.16em; text-transform:uppercase; margin-top:5px;">Google Rating</div>
+      margin-top: clamp(40px, 7vw, 60px);
+      /* Use a responsive approach: row on tablet+, wraps gracefully on small phones */
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      background: rgba(12,12,14,0.62);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(201,168,76,0.28);
+      border-radius: 14px;
+      padding: clamp(14px, 3vw, 20px) clamp(16px, 4vw, 36px);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.06);
+      /* Prevent bar from stretching edge-to-edge on narrow phones */
+      max-width: min(460px, 92vw);
+      width: 100%;
+    ">
+      <!-- Stat: Rating -->
+      <div style="text-align: center; padding: 8px clamp(14px, 4vw, 28px) 8px 0;">
+        <div class="gold-text" style="
+          font-family: 'Cormorant Garamond', serif;
+          font-size: clamp(26px, 5vw, 34px);
+          font-weight: 700; line-height: 1;
+        ">4.5★</div>
+        <div style="font-size: 9px; color: #6a6a7a !important; -webkit-text-fill-color: #6a6a7a !important; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 5px; white-space: nowrap;">Google Rating</div>
       </div>
-      <div style="width:1px; height:44px; background:rgba(201,168,76,0.22);"></div>
-      <div style="text-align:center; padding:0 28px;">
-        <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:700; line-height:1;">24/7</div>
-        <div style="font-size:10px; color:#6a6a7a; letter-spacing:0.16em; text-transform:uppercase; margin-top:5px;">Eatery &amp; Service</div>
+      <!-- Divider -->
+      <div aria-hidden="true" style="width: 1px; height: 40px; background: rgba(201,168,76,0.22); flex-shrink: 0;"></div>
+      <!-- Stat: 24/7 -->
+      <div style="text-align: center; padding: 8px clamp(14px, 4vw, 28px);">
+        <div class="gold-text" style="
+          font-family: 'Cormorant Garamond', serif;
+          font-size: clamp(26px, 5vw, 34px);
+          font-weight: 700; line-height: 1;
+        ">24/7</div>
+        <div style="font-size: 9px; color: #6a6a7a !important; -webkit-text-fill-color: #6a6a7a !important; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 5px; white-space: nowrap;">Eatery &amp; Service</div>
       </div>
-      <div style="width:1px; height:44px; background:rgba(201,168,76,0.22);"></div>
-      <div style="text-align:center; padding:0 0 0 28px;">
-        <div class="gold-text" style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:700; line-height:1;">VIP</div>
-        <div style="font-size:10px; color:#6a6a7a; letter-spacing:0.16em; text-transform:uppercase; margin-top:5px;">Club Experience</div>
+      <!-- Divider -->
+      <div aria-hidden="true" style="width: 1px; height: 40px; background: rgba(201,168,76,0.22); flex-shrink: 0;"></div>
+      <!-- Stat: VIP -->
+      <div style="text-align: center; padding: 8px 0 8px clamp(14px, 4vw, 28px);">
+        <div class="gold-text" style="
+          font-family: 'Cormorant Garamond', serif;
+          font-size: clamp(26px, 5vw, 34px);
+          font-weight: 700; line-height: 1;
+        ">VIP</div>
+        <div style="font-size: 9px; color: #6a6a7a !important; -webkit-text-fill-color: #6a6a7a !important; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 5px; white-space: nowrap;">Club Experience</div>
       </div>
     </div>
 
-  </div>
+  </div><!-- /hero content -->
 
-  <!-- Bottom scroll hint -->
-  <div style="position:absolute; bottom:28px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; z-index:10;">
-    <div style="font-size:9px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(201,168,76,0.5);">Scroll</div>
-    <div style="width:1px; height:36px; background:linear-gradient(to bottom, #c9a84c88, transparent); animation:float1 2s ease-in-out infinite;"></div>
+  <!-- ── Scroll hint (absolute, won't affect content flow) ── -->
+  <div aria-hidden="true" style="
+    position: absolute;
+    bottom: clamp(16px, 4vh, 28px);
+    left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    z-index: 10;
+    pointer-events: none;
+  ">
+    <div style="font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(201,168,76,0.5);">Scroll</div>
+    <div style="width: 1px; height: 32px; background: linear-gradient(to bottom, #c9a84c88, transparent); animation: float1 2s ease-in-out infinite;"></div>
   </div>
 
 </section>
